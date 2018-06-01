@@ -54,7 +54,4 @@ def somefunc(param1='', param2=0):
 
 class SomeClass:
     pass
-
->>> message = '''interpreter
-... prompt'''
 {% endhighlight %}
