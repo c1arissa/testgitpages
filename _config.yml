@@ -15,29 +15,29 @@ sass:
   style: compressed # expanded
 
 # SEO settings
-title: end2end
+title: Clarissa Podell
 description: "A free Jekyll theme for download"
 keywords: "Jekyll, theme, free, download, SEO, blog, web"
-url: http://nandomoreira.me
-baseurl: "/end2end"
+url: http://c1arissa.github.io
+baseurl: "/testgitpages"
 
 google_analytics: UA-52446115-1
-repo: http://github.com/nandomoreirame/end2end
-disqus_shortname: "nandothemes"
-disqus_site_shortname: "nandothemes"
+repo: http://github.com/c1arissa/testgitpages
+#disqus_shortname: "nandothemes"
+#disqus_site_shortname: "nandothemes"
 
 # Author settings
 author:
-  name: Fernando Moreira
-  job: Frontend Engineer
+  name: Clarissa Podell
+  job: Computer Security and Hacking enthusiast
   bio: "Enthusiast performance, responsive design and usability, always looking for the best project and good coffee."
-  thumb: /images/author.jpg
-  email: nandomoreira.me@gmail.com
-  url: https://nandomoreira.me/
-  github: https://github.com/nandomoreirame
-  twitter: https://twitter.com/umdevux
-  facebook: https://facebook.com/umdevux
-  linkedin: https://linkedin.com/in/nandomoreirame
+  thumb: /images/profile.jpg
+  email: clarissapodell@gmail.com
+  url: https://c1arissa.github.io/
+  github: https://github.com/c1arissa
+  #twitter: https://twitter.com/umdevux
+  #facebook: https://facebook.com/umdevux
+  linkedin: https://linkedin.com/in/clarissapodell
 
 # navbar pages
 navbar:
