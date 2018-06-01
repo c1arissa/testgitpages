@@ -44,7 +44,7 @@ int main(int argc, char *argv[]) {
 }
 {% endhighlight %}
 
-{% highlight python %}
+{% highlight py %}
 @requires_authorization
 def somefunc(param1='', param2=0):
     r'''A docstring'''
