@@ -49,5 +49,7 @@ navbar:
     title: Blog
   - slug: contact
     title: Contact
+  - slug: links
+    title: Links
 
 exclude: ["config.rb", "src", "Gemfile", "Gemfile.lock", "package.json","README.md", "Rakefile"]
