@@ -5,6 +5,8 @@ permalink: /links/
 ---
 
 ## Favorite wargames
+[CTF List](http://captf.com/practice-ctf/)
+
 [OverTheWire](http://overthewire.org/wargames/)
 Levels complete: Bandit, Leviathan, Krypton, Narnia, Behemoth
 Almost done: Utumno, Natas
