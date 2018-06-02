@@ -4,7 +4,7 @@ title: Links
 permalink: /links/
 ---
 
-## Favorite wargames
+## {% octicon terminal %} Favorite wargames
 [CTF List](http://captf.com/practice-ctf/)
 
 [OverTheWire](http://overthewire.org/wargames/)
@@ -14,7 +14,7 @@ Almost done: Utumno, Natas
 [WeChall Stats/Profile](https://www.wechall.net/profile/c1arissa)
 A scoreboard that tracks progress of online wargame players.
 
-## Favorite blogs
+## {% octicon pencil %} Favorite blogs
 [Corelan Team](https://www.corelan.be/)
 Best source for Windows exploitation techniques.
 
