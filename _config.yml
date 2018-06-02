@@ -52,4 +52,7 @@ navbar:
   - slug: links
     title: Links
 
+gems:
+        - jekyll-octicons
+
 exclude: ["config.rb", "src", "Gemfile", "Gemfile.lock", "package.json","README.md", "Rakefile"]
