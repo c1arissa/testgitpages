@@ -10,7 +10,9 @@ You can find the source code for the Jekyll new theme at: [github.com/jglovier/j
 
 You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
 
-```c
+{% octicon alert height:32 class:"right left" aria-label:hi %}
+
+{% highlight c %}
 #include <iostream>
 
 int main(int argc, char *argv[]) {
@@ -25,4 +27,4 @@ int main(int argc, char *argv[]) {
 
   return -2e3 + 12l;
 }
-```
+{% endhighlight %}
