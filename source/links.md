@@ -18,11 +18,13 @@ A scoreboard that tracks progress of online wargame players.
 [Corelan Team](https://www.corelan.be/)
 Best source for Windows exploitation techniques.
 
-## Favorite books
+## {% octicon book height:32 class:"right left" aria-label:hi %} Favorite books
 [Hacking - The Art of Exploitation by Jon Erickson]()
 
-## Things I <i class="icon icon-heart"></i>
+## Things I {% octicon heart height:32 class:"right left" aria-label:hi %} <i class="icon icon-heart"></i>
 [angr.io](http://angr.io/)
 Next-generation binary analysis engine from Shellphish.
 
 tob ctf
+
+{% octicon octoface height:32 class:"right left" aria-label:hi %}
