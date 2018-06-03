@@ -28,3 +28,5 @@ int main(int argc, char *argv[]) {
   return -2e3 + 12l;
 }
 {% endhighlight %}
+
+![foo](/url "title")
