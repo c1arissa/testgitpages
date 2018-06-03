@@ -2,7 +2,11 @@
 permalink: /blog/:year/:title/
 markdown: kramdown
 highlighter: pygments
-plugins: [jekyll-paginate]
+#plugins: [jekyll-paginate]
+
+plugins:
+    - jekyll-paginate
+    - jekyll-redirect-from
 
 paginate: 3
 paginate_path: "/blog/page/:num/"
@@ -54,5 +58,8 @@ navbar:
 
 gems:
         - jekyll-octicons
+
+whitelist:
+    - jekyll-redirect-from
 
 exclude: ["config.rb", "src", "Gemfile", "Gemfile.lock", "package.json","README.md", "Rakefile"]

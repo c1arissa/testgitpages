@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+{% include header.html %}
+
+<main class="main-container">
+  <div class="container">
+      <article role="article" class="page card">
+
+        <header class="post-header">
+          <h1 class="post-title">{{ page.title }}</h1>
+        </header>
+
+        <div class="post-content">
+          {{ content }}
+        </div>
+
+      </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="txt-medium-gray">
+      <small>&copy;{{ site.time | date: '%Y' }} All rights reserved. {% octicon code %} with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> and {% octicon heart %}</small>
+    </p>
+  </div>
+</footer>

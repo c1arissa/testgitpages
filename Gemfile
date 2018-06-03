@@ -27,4 +27,5 @@ group :jekyll_plugins do
   gem "jekyll-compose"
   gem "kramdown"
   gem "jekyll-octicons"
+  gem 'jekyll-redirect-from'
 end

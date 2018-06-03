@@ -74,3 +74,21 @@
     &-content
       +media($tablet-small)
         padding: 0 0 0 $base-spacing
+
+.tags
+    .fa-tags
+        color: $dark-gray-color
+
+.tag
+    @include relative-font-size(.8)
+        color: $base-font-color
+        background-color: $secondary-background-color
+        font-weight: normal
+        padding: 2px 5px
+        &:hover
+            color: $light-gray-color
+            background-color: $dark-gray-color
+            text-decoration: underline
+
+.tag-count
+    margin-left: 3px

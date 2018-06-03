@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+{% if page.tag %}
+<h1><i class="fas fa-hashtag"></i>{{ page.tag }}</h1>
+
+<ul class="post-list">
+{% if site.tags[page.tag] %}
+  {% for post in site.tags[page.tag] %}
+    <li>
+      {% assign date_format = "%b %-d, %Y" | default: "%b %-d, %Y" %}
+      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+      <h2>
+        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      </h2>
+      <p>
+        {{ post.content | strip_html | truncatewords:25 }}
+      </p>
+    </li>
+  {% endfor %}
+{% endif %}
+</ul>
+
+
+<hr>
+{% endif %}
+
+
+{% if site.tags != '' %}
+<h1>Tags</h1>
+
+<div class="tags">
+    {% octicon tag %}
+  <!-- <i class="fa fa-tags"></i> -->
+  {% for tag_obj in site.tags %}
+    {% assign tag = tag_obj | first %}
+    {% assign count = site.tags[tag].size %}
+    <a href="{{site.baseurl}}/tag/{{ tag }}">
+      <span class="tag">{{ tag }}{% if count != 1 %}<span class="tag-count">({{ count }})</span>{% endif %}</span></a>
+  {% endfor %}
+</div>
+{% endif %}

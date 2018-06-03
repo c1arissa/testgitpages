@@ -6,6 +6,7 @@
 .hero-inner
   width: 100%
   height: auto
+  min-height: 100%
   display: table-cell
   vertical-align: middle
   text-align: center
@@ -13,7 +14,10 @@
   .dot
     padding: 5px
     border: 1px solid $light-gray-color
-    width: 9em
+    width: 8em
+
+    +media($tablet-small)
+        width: 9em
 
   h1,
   h3
