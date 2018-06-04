@@ -78,17 +78,24 @@
 .tags
     .fa-tags
         color: $dark-gray-color
+        display: inline-block
+        margin-top: 10px
+        padding-bottom: 50px
 
 .tag
-    @include relative-font-size(.8)
-        color: $base-font-color
-        background-color: $secondary-background-color
-        font-weight: normal
-        padding: 2px 5px
-        &:hover
-            color: $light-gray-color
-            background-color: $dark-gray-color
-            text-decoration: underline
+    // @include relative-font-size(.8)
+    color: $base-font-color
+    background-color: $secondary-background-color
+    font-weight: normal
+    padding: 5px
+    //padding: 2px 5px
+    border: 1px solid $primary-color
+    border-radius: 12px
+    //margin: 5px 2px
+    &:hover
+        color: $light-gray-color
+        background-color: $primary-color
+        text-decoration: underline
 
 .tag-count
     margin-left: 3px

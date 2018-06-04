@@ -12,6 +12,19 @@ layout: pages
       </em>
     </header>
 
+      {% if page.tags != '' %}
+      <div class="tags">
+          <h4><i class="icon icon-price-tags"></i> Tags:
+          <!-- <i class="fa fa-tags"></i> -->
+          {% for tag in page.tags %}
+          {% assign count = site.tags[tag].size %}
+          <a href="{{site.baseurl}}/tag/{{ tag }}">
+              <span class="tag">{{ tag | escape }}{% if count != 1 %}<span class="tag-count">({{ count }})</span>{% endif %}</span></a>
+              {% endfor %}
+          </h4></div>
+          {% endif %}
+
+
     <div class="post-content">
       {% if page.image %}
         <figure class="post-thumbnail {% if page.image %}{% else %}no-image{% endif %}">
@@ -20,20 +33,7 @@ layout: pages
       {% endif %}
       {{ content }}
     </div>
-
-    {% if page.tags != '' %}
-    <div class="tags">
-        {% octicon tag %}
-        <!-- <i class="fa fa-tags"></i> -->
-        {% for tag in page.tags %}
-        {% assign count = site.tags[tag].size %}
-        <a href="{{site.baseurl}}/tag/{{ tag }}">
-            <span class="tag">{{ tag | escape }}{% if count != 1 %}<span class="tag-count">({{ count }})</span>{% endif %}</span></a>
-            {% endfor %}
-        </div>
-        {% endif %}
-
-    {% include comments.html %}
+    <!-- {% include comments.html %} -->
   </div>
 
 </article>
