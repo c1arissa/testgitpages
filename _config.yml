@@ -23,7 +23,7 @@ sass:
 title: Clarissa Podell
 description: "Clarissa Podell's personal website and blog."
 keywords: "Jekyll, theme, free, download, SEO, blog, web"
-url: http://c1arissa.github.io
+url: https://c1arissa.github.io/
 baseurl: "/testgitpages"
 
 google_analytics: UA-52446115-1
@@ -34,7 +34,7 @@ repo: http://github.com/c1arissa/testgitpages
 # Author settings
 author:
   name: Clarissa Podell
-  job: Computer Security and Hacking enthusiast
+  job: Cybersecurity and Hacking enthusiast
   bio: "Enthusiast performance, responsive design and usability, always looking for the best project and good coffee."
   thumb: /images/profile.jpg
   email: clarissapodell@gmail.com
