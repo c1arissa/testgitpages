@@ -9,11 +9,17 @@
     <nav class="navbar">
       <ul>
         <li><a href="{{ '/' | prepend: site.baseurl }}" title="Home">Home</a></li>
-        {% for item in site.navbar %}
+        <li><a href="{{ '/' | prepend: site.baseurl }}about" title="About">About</a></li>
+        <li><a href="{{ '/' | prepend: site.baseurl }}blog" title="Blog">Blog</a></li>
+        <li><a href="{{ '/' | prepend: site.baseurl }}icons" title="Icons">Icons</a></li>
+        <li><a href="{{ '/' | prepend: site.baseurl }}links" title="Links">Links</a></li>
+        <li><a href="{{ '/' | prepend: site.baseurl }}tags" title="tags">Tags</a></li>
+        <li><a href="{{ '/' | prepend: site.baseurl }}contact" title="Contact">Contact</a></li>
+        <!-- {% for item in site.navbar %}
           <li><a href="{{ '/' | prepend: site.baseurl }}{{ item.slug }}" title="{{ item.title }}">{{ item.title }}</a></li>
         {% endfor %}
-        <li><a href="{{ site.repo }}/archive/master.zip" title="Download">Download</a></li>
-        <!-- <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank"><i class="icon icon-rss"></i></a></li> -->
+         <li><a href="{{ site.repo }}/archive/master.zip" title="Download">Download</a></li>
+         <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank"><i class="icon icon-rss"></i></a></li> -->
       </ul>
     </nav>
   </div>

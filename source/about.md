@@ -10,23 +10,14 @@ You can find the source code for the Jekyll new theme at: [github.com/jglovier/j
 
 You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
 
-{% octicon alert height:32 class:"right left" aria-label:hi %}
+<div class="floated">
+<img src="/testgitpages/images/profile.jpg" alt="Alt Text"><br>
+Fig text
+<figcaption class="caption">Photo by John Doe</figcaption>
+</div>
 
-{% highlight c %}
-#include <iostream>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-int main(int argc, char *argv[]) {
-
-  /* An annoying "Hello World" example */
-  for (auto i = 0; i < 0xFFFF; i++)
-    cout << "Hello, World!" << endl;
-
-  char c = '\n';
-  unordered_map <string, vector<string> > m;
-  m["key"] = "\\\\"; // this is an error
-
-  return -2e3 + 12l;
-}
-{% endhighlight %}
+<p style="clear:both;"></p>
 
 ![foo](/url "title")

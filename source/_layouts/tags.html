@@ -1,5 +1,5 @@
 ---
-layout: pages
+layout: page
 ---
 
 {% if page.tag %}
@@ -8,12 +8,15 @@ layout: pages
 <ul class="post-list">
 {% if site.tags[page.tag] %}
   {% for post in site.tags[page.tag] %}
-    <li>
+    <li style="margin-bottom: 1.5rem;">
       {% assign date_format = "%b %-d, %Y" | default: "%b %-d, %Y" %}
       <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-      <h2>
+      <h2 class="post-title">
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </h2>
+      <!-- <h2>
         <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-      </h2>
+    </h2> -->
       <p>
         {{ post.content | strip_html | truncatewords:25 }}
       </p>

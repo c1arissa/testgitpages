@@ -10,19 +10,20 @@ layout: pages
       <em class="post-meta">
         <time>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</time>
       </em>
-    </header>
+      <br>
 
       {% if page.tags != '' %}
       <div class="tags">
-          <h4><i class="icon icon-price-tags"></i> Tags:
+          <i class="fas fa-tags"></i>&nbsp; 
           <!-- <i class="fa fa-tags"></i> -->
           {% for tag in page.tags %}
           {% assign count = site.tags[tag].size %}
           <a href="{{site.baseurl}}/tag/{{ tag }}">
               <span class="tag">{{ tag | escape }}{% if count != 1 %}<span class="tag-count">({{ count }})</span>{% endif %}</span></a>
               {% endfor %}
-          </h4></div>
+          </div>
           {% endif %}
+      </header>
 
 
     <div class="post-content">
