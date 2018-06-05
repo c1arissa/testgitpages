@@ -1,8 +1,11 @@
 # Build settings
 permalink: /blog/:year/:title/
 markdown: kramdown
-highlighter: pygments
+#highlighter: pygments
 #plugins: [jekyll-paginate]
+
+highlightStyle: dracula
+highlightLanguages: [ dos, vim, x86asm ]
 
 plugins:
     - jekyll-paginate

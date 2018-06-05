@@ -19,7 +19,7 @@ permalink: /links/
 ## Security blogs
 - [Corelan Team](https://www.corelan.be/)     
 Best source for Windows exploitation techniques.
-- [Trail of Bits](https://trailofbits.com/)  All around amazing security blog.
+- [Trail of Bits](https://blog.trailofbits.com/)  All around amazing security blog.
 
 ## Books {% octicon book height:18 class:"right left" aria-label:hi %}
 Yes ... I still purchase hard-copies.  Nothing beats the smell and feel of a brand new book!
