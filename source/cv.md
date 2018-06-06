@@ -2,16 +2,10 @@
 layout: page
 permalink: /cv/
 title: Curriculum Vitae
-category: base
-description: "Curriculum Vitae / Resume"
+description: "Clarissa's Curriculum Vitae / Resume"
 tags:
   - cv
   - resume
-comments: false
-#style: |
-#  .container {
-#        max-width: 48rem;
-#    }
 ---
 
 <!-- Alternaetly, user html5 embed tag -->
