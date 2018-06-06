@@ -50,6 +50,7 @@ layout: pages
     {% if post.url != page.url %}
       {% for tag in page.tags %}
         {% if post.tags contains tag %}
+                         <!-- FIX LINK -->
           <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a><br /></li>
           {% break %}
         {% endif %}
