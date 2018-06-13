@@ -4,6 +4,8 @@ title: Links
 permalink: /links/
 ---
 
+This page contains a list of material I use on a regular basis.  I thought since I have found them useful, others might as well. This page will be updated whenever I find new useful resources.
+
 ## Wargames
 * [CTF List](http://captf.com/practice-ctf/): Maintains an active list of online wargames and cybersecurity challenges.  
 * [WeChall Stats/Profile](https://www.wechall.net/profile/c1arissa): A scoreboard that tracks progress of online players across a range of wargames.  The link will bring you to my profile - username `c1arissa`.
@@ -18,7 +20,7 @@ permalink: /links/
 
 ## Security blogs
 - [Corelan Team](https://www.corelan.be/)     
-Best source for Windows exploitation techniques.
+    * Best source for Windows exploitation techniques.
 - [Trail of Bits](https://blog.trailofbits.com/)  All around amazing security blog.
 
 ## Books {% octicon book height:18 class:"right left" aria-label:hi %}
