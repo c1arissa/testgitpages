@@ -5,6 +5,7 @@ permalink: /links/
 ---
 
 This page contains a list of material I use on a regular basis.  I thought since I have found them useful, others might as well. This page will be updated whenever I find new useful resources.
+{% comment %} Peoples’ lists are full of insights about them, and for that reason they’re good to include on a page like this. They help people find common interests. {% endcomment %}
 
 ## Wargames
 * [CTF List](http://captf.com/practice-ctf/): Maintains an active list of online wargames and cybersecurity challenges.  

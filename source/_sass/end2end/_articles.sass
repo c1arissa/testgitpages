@@ -13,15 +13,17 @@
 
   &-thumbnail
     &, img
-      background-color: #f1eff0
+      //background-color: #f1eff0
       border-radius: $base-border-radius
+      //border: $base-border
+      //margin-bottom: 20px
 
     +media($tablet-small)
       float: left
-      max-width: 250px
+      max-width: 350px
       margin-right: $small-spacing
       margin-bottom: $small-spacing
-      padding: $small-spacing
+      //padding: $small-spacing
       border: $base-border
 
   .read-more
@@ -61,6 +63,7 @@
 
       +media($tablet-small)
         width: 250px
+        min-height: 200px
         margin: 0
 
       > a
