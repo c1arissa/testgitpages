@@ -1,18 +1,27 @@
 # Build settings
 permalink: /blog/:year/:title/
 markdown: kramdown
-#highlighter: pygments
-#plugins: [jekyll-paginate]
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    default_lang: html
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
 
-highlightStyle: dracula
-highlightLanguages: [ dos, vim, x86asm ]
+highlightStyle: hopscotch
+highlightLanguages: [ dos, vim, x86asm, shell, console ]
 
 plugins:
     - jekyll-paginate
     - jekyll-redirect-from
     - jekyll-octicons
 
-paginate: 3
+paginate: 5
 paginate_path: "/blog/page/:num/"
 comments: true
 
@@ -24,7 +33,7 @@ sass:
 
 # SEO settings
 title: Clarissa Podell
-description: "Clarissa Podell's personal website and blog."
+description: "Clarissa Podell's personal website and blog"
 keywords: "Jekyll, theme, free, download, SEO, blog, web"
 url: https://c1arissa.github.io/
 baseurl: "/testgitpages"

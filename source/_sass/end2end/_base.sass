@@ -33,32 +33,84 @@ figure
   +media($desktop)
     max-width: 960px
 
-pre,
-code
-    font-size: 0.9em
-    font-family: Menlo,Monaco,Consolas,"Courier New",monospace
+// NEWLY ADDED BELOW
+figcaption
+    text-align: center
+    font-size: 90%
+    margin-top: 0
+    margin-bottom: 20px
 
-code
+//pre,
+//code
+    max-width: 100%
+    font-size: 0.85em
+    font-family: 'Monaco', Consolas,"Courier New", Menlo,Monaco,monospace
+    padding: .5em
+    //line-height: 1.25em
+    //white-space: pre-wrap
+    //overflow-wrap: break-word
+    //word-break: break-all
+    //word-wrap: break-word
+
+//code
     padding: 2px 4px
     font-size: 90%
-    //line-height: 1
     color: #c7254e
     background-color: #f9f2f4
     border-radius: 4px
-    // padding: 1px 5px
 
 pre
-    padding: 8px 12px
+    max-width: 100%
+    overflow: auto
     overflow-x: auto
+    margin: 20px auto
+    font-size: 0.9em
+    padding: .5em
+    -webkit-overflow-scrolling: touch
+    white-space: pre-wrap
+    overflow-wrap: break-word
+    word-break: break-all
+    word-wrap: break-word
 
-  > code
-      border: 0
-      padding: 0
-      padding-right: 0
-      padding-left: 0
-      line-height: 1.15
-      white-space: pre-wrap
-      font-size: inherit
-      color: inherit
-      background-color: transparent
-      border-radius: 0
+    code
+        border: 0
+        line-height: 1.15
+        font-family: 'Monaco', Consolas,"Courier New", Menlo,Monaco,monospace
+        //font-size: 0.9em
+        color: inherit
+        background-color: transparent
+        border-radius: 0
+
+code
+    //font-size: 90%
+    padding: 2px 0px
+    color: #c7254e
+    background-color: #f9f2f4
+    border-left: 4px solid #f9f2f4
+    border-right: 4px solid #f9f2f4
+    border-radius: 0px
+    font-family: 'Monaco', Consolas,"Courier New", Menlo,Monaco,monospace
+
+.output
+    //background-color: #f8f8f8
+    //border: 1px solid #e5e5e5
+    color: $dark-gray-color
+    padding: 1.1em
+    //border-radius: 3px
+    max-width: 100%
+    height: auto
+    overflow: auto
+    overflow-x: auto
+    font-size: 14px
+    //font-family: Courier, Consolas, Monaco, Bitstream Vera Sans Mono, "Segoe UI", Menlo, monospace
+    font-weight: 400
+    line-height: 1.1em
+    margin: 20px auto
+    white-space: pre-wrap
+    overflow-wrap: break-word
+    word-break: break-all
+    word-wrap: break-word
+
+    b
+        color: $primary-color
+        font-weight: bold

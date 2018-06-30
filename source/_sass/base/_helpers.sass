@@ -42,34 +42,45 @@
 
 .octicon
   display: inline-block
-  vertical-align: text-top
+  vertical-align: middle
   fill: currentColor
 
 .floated
     float: left
     width: 300px
-    margin: 4px 10px 0px 0px
+    margin-right: 20px
 
 .floated-left
     float: left
-    //width: 100px
-    //margin: 0px 10px 0px 0px
 
 .floated-right
     float: right
-    //width: 100px
-    //margin: 0px 10px 0px 0px
 
 .caption
     position: relative
     margin: 0 auto
     width: 100%
     text-align: center
-    font-size: .8rem
+    font-size: .9rem
 
 .push-down
     margin-top: 20px
-    margin-bottom: 40px
+    margin-bottom: 100px
 
     +media($tablet-small)
         margin-top: 110px
+
+.img-center
+    width: 80%
+    max-width: 100%
+    height: auto
+    background-color: white
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    margin-bottom: 25px
+    display: block
+    margin-left: auto
+    margin-right: auto
+
+.img-container
+    text-align: center
+    padding: 10px 20px

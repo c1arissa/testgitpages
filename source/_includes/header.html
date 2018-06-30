@@ -1,7 +1,8 @@
 <header class="site-header">
   <div class="container">
     <input type="checkbox" id="toggleNavbar">
-    <h1 class="logo"><a href="{{ "/" | prepend: site.baseurl }}">clarissa<span>podell</span></a></h1>
+    <h1 class="logo">
+        <a href="{{ "/" | prepend: site.baseurl }}"><span class="first">clarissa</span><span class="last">podell</span></a></h1>
     <label for="toggleNavbar" role="button" class="toggle-navbar-button">
       <i class="icon icon-menu"></i>
       <i class="icon icon-cross"></i>
@@ -15,8 +16,8 @@
         <li><a href="{{ '/' | prepend: site.baseurl }}links" title="Links">Links</a></li>
         <li><a href="{{ '/' | prepend: site.baseurl }}contact" title="Contact">Contact</a></li>
         <li><a href="{{ '/' | prepend: site.baseurl }}cv" title="CV">cv</a></li>
-        <li><a href="{{ site.baseurl }}/images/Resume.pdf" title="Download Resume">Resume</a></li>
-        <!-- {% for item in site.navbar %}
+        <!--<li><a href="{{ site.baseurl }}/images/Resume.pdf" title="Download Resume">Resume</a></li>
+         {% for item in site.navbar %}
           <li><a href="{{ '/' | prepend: site.baseurl }}{{ item.slug }}" title="{{ item.title }}">{{ item.title }}</a></li>
         {% endfor %}
          <li><a href="{{ site.repo }}/archive/master.zip" title="Download">Download</a></li>
