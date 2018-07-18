@@ -20,7 +20,29 @@ dl
 
 ul
   list-style-type: disc
-  //list-style-image: url('../images/bullet.png')
+  //background: url("arrow.png") 0 50% no-repeat
+  //list-style-type: none
+
+ul > li > ul
+  list-style-type: circle
+
+//ul > li> ul li:before
+  color: $primary-color
+  content: '» '
+  font-size: 1.2em
+  font-weight: bold
+
+ul > li > ul > li > ul
+  list-style-type: square
+
+ul > li > ul > li > ul > li > ul
+  list-style-type: disc
+
+ul > li > ul > li > ul > li > ul > li > ul
+  list-style-type: circle
+
+ul > li > ul > li > ul > li > ul > li > ul > li > ul
+  list-style-type: square
 
 ol
   list-style-type: decimal

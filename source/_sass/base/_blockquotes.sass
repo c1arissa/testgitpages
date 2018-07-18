@@ -1,4 +1,4 @@
-blockquote
+//blockquote
   //background: #f9f9f9
   color: lighten($dark-gray-color, 45%)
   border-left: 3px solid #bbb
@@ -7,7 +7,7 @@ blockquote
   //padding: 0.5em 10px
   quotes: "“" "”" "‘" "’"
 
-blockquote:before
+//blockquote:before
   color: #ccc
   //content: open-quote
   font-size: 4em
@@ -17,3 +17,23 @@ blockquote:before
 
 blockquote p
   display: inline
+
+blockquote
+  color: tint($dark-gray-color, 35%)
+  position: relative
+  margin: 2em 0
+  padding: .3em 2em .3em 2.0em
+  //font-size: 1.6em
+  font-family: Georgia, "Times New Roman", Times, serif
+  font-weight: 300
+  font-style: italic
+  border-left: 3px solid #bbb
+
+blockquote:before
+  display: block
+  line-height: 1
+  //font-size: 1.2em
+  position: absolute
+  left: 0
+  top: -0.1em
+  color: #DDE4E6

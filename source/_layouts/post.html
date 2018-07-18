@@ -2,61 +2,94 @@
 layout: pages
 ---
 
+<!-- posted in category posted-on date by Clarissa -->
 <article role="article" class="post">
-
   <div class="card">
     <header class="post-header">
       <h1 class="post-title">{{ page.title }}</h1>
-      <p class="post-meta">
-        <time>Created on {{ page.date | date: "%b %-d, %Y" }}</time>
-        <span>
-            {% if page.author %} <span class="bullet"></span>
-            by {{ page.author }}{% endif %}
-        </span>
-     <!-- &nbsp;&nbsp;&bull;&nbsp;&nbsp; {% if page.meta %} •{{ page.meta }}{% endif %}
-     </em> <span class="tags"> -->
-            {% if page.tags != '' %} <span class="bullet"></span>
-            <i class="icon icon-price-tag" style="font-size: 90%; opacity: .85"></i>
-          {% for tag in page.tags %}
-          {% assign count = site.tags[tag].size %}
-          <a href="{{site.baseurl}}/tag/{{ tag }}">
-              <span class="tag">{{ tag | escape }}{% if count != 1 %}<span class="tag-count">({{ count }})</span>{% endif %}</span></a>
-              {% endfor %}
-          {% endif %}
-      </p>
-      </header>
-
-      {{ content }}
-
-    <!--
-    <div class="post-content">
-      {% if page.image %}
-        <figure class="post-thumbnail {% if page.image %}{% else %}no-image{% endif %}">
-          <img src="{{ page.image }}" alt="{{ page.title }}">
-        </figure>
-      {% endif %}
-      {{ content }}
-    </div>
-     {% include comments.html %}
-  </div> -->
-
-  <div class="related">
-  <hr>
-  <h2>Related Posts</h2>
-<ul class="related-posts">
-  {% for post in site.posts %}
-    {% if post.url != page.url %}
-      {% for tag in page.tags %}
-        {% if post.tags contains tag %}
-                         <!-- FIX LINK -->
-          <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br /></li>
-          {% break %}
+      <div class="post-meta">
+            <span class="post-date"><time>{{ page.date | date: "%A %B %-d, %Y" }}</time>
+            {% if page.tags != blank %}
+            &ensp;|&ensp;
+            {% for tag in page.tags %}
+            <a href="{{site.baseurl}}/tags/#{{ tag }}"><span class="post-tags">{{ tag }}</span></a>
+            {% endfor %}
+            </span>
         {% endif %}
-      {% endfor %}
-    {% endif %}
-  {% endfor %}
-</ul>
-</div>
+    </div>
+    </header>
+    <!-- <div class="hrule base-spacing"></div> -->
+    {{ content | toc }}
 
+<!------ post meta details ------>
+{% include post-meta-details.html %}
+<!------ post meta details ------>
+
+<div class="hrule"></div>
+
+<!------ related post list ------>
+<div class="related">
+ {% if site.related_posts.size >= 1 %}
+<!-- <div class="hrule"></div> -->
+  <ul class="related-posts">
+  <h3 class="footer-section-title">Related Posts</h3>
+    {% for post in site.related_posts limit:3 %}
+      <li>
+          <h6>
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            {{ post.title }}
+            <small>{{ post.date | date_to_string }}</small>
+          </a>
+      </h6>
+      </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
 </div>
-</article>
+<!------ related post list ------>
+
+<!-- .about-author -->
+<div class="about-author">
+  <h3>WRITTEN BY</h3>
+  <!-- .author-bio -->
+  <div class="author-bio">
+      <!-- .author-img -->
+      <div class="author-img">
+          <a href="{{ site.baseurl }}/about"><img alt="Logo" src="{{ site.baseurl }}/images/logo.png" class="avatar"></a>
+      </div>
+      <!-- .author-img -->
+      <!-- .author-info -->
+      <div class="author-info">
+          <h4 class="author-name">{{ site.author.name }}</h4>
+        <!--  <p>{{ site.description | markdownify }}</p> -->
+          <p>
+              Clarissa is a recent Computer Science and Information Security graduate who loves Vulnerability Research, Binary Exploitation,
+              Reverse Engineering, and Exploit Mitigation.  On her free time, she loves playing wargames to learn and practice new hacking skillz.
+         </p>
+    </div>
+      <!-- .author-info -->
+  </div>
+  <!-- .author-bio -->
+</div>
+<!-- .about-author -->
+
+<!------ post nav ------>
+{% include post-nav.html %}
+<!------ post nav ------>
+
+</div>  <!-- end card -->
+</article> <!-- end article -->
+  <!------ related post list
+   <div class="related">
+   {% if site.related_posts.size >= 1 %}
+    <h3>Related Posts</h3>
+    <ul class="related-posts">
+    {% for related_post in site.related_posts limit: 5 %}
+      <li><a href="{{ related_post.url }}">{{ related_post.title | strip_newlines }}<span class="date-style">&ensp;&ndash;&ensp;{{ related_post.date  | date_to_string }}</span></a></li>
+    {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  {% include related.html %}
+  </div>
+  </article> -->

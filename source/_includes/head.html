@@ -1,27 +1,36 @@
+{% if site.google_analytics %}
+    {% include google_analytics.html %}
+{% endif %}
+
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="{{ site.author.name }}" />
 <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-<title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-<link rel="shortcut icon" href="/testgitpages/images/favicon.ico">
-<link href="/testgitpages/images/favicon.ico" rel="icon" type="image/x-icon"/>
-<!--  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/x-icon" sizes="32x32" href="testgitpages/favicon-32x32.png">
-<link rel="icon" type="image/x-icon" sizes="16x16" href="testgitpages/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#9f00a7">
-<meta name="theme-color" content="#ffffff"> -->
+<meta property="og:site_name" content="Clarissa Podell" />
+<meta property="og:title" content="Clarissa Podell" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/images/profile.jpg" />
+<meta property="og:description" content="Clarissa Podell's Personal Site and Blog" />
+<meta property="og:url" content="{{ site.url }}" />
+<meta property="twitter:card" content="summary_large_image" />
 
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+<!--
+<meta name="google-site-verification" content="TG9IzwEMIAxRk1ZBQBSeUfVFg0sPztuzokR4oE54yPQ">
+
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,300italic|Roboto:300,300italic|Open+Sans:400,400italic,700,700italic|Lato:400,400italic,700,700italic,800" rel="stylesheet" type="text/css" />
+<meta name="description" content="The personal website, portfolio and blog of Shannon Babincsak: programmer, web developer, and constitutional law geek.">
+<meta name="keywords" content="Shannon Babincsak, web dev, web developer, codeinpink, portfolio">
+-->
+
+<title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+<!-- <link rel="shortcut icon" href="/testgitpages/images/favicon.ico">
+<link href="/testgitpages/images/fav.ico" rel="icon" type="image/x-icon"/> -->
+{% include favicon.html %}
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}">
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
-
-<!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/hopscotch.min.css">
- <script src="https://use.fontawesome.com/c7388500fe.js"></script> -->
-{% include google_analytics.html %}

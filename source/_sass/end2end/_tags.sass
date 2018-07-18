@@ -1,0 +1,185 @@
+.post-tags,
+.post-cats,
+.set-1,
+.set-2,
+.set-3,
+.set-4,
+.set-5
+    display: inline-block
+    background-color: tint($base-font-color, 80%)
+    padding: 0 .5rem
+    margin-right: .5rem
+    border-radius: 3px
+    color: $base-font-color
+    font-size: .8em
+    font-family: $base-font-family
+
+    &:before
+        content: "\f02b"
+        font-family: FontAwesome
+        padding-right: .5em
+
+    &:hover
+        text-decoration: none
+        background: $primary-color
+        color: white
+
+    @include transition(all .1s ease-in-out)
+
+.post-cats
+    &:before
+        content: "\f07c"
+        font-family: FontAwesome
+        padding-right: .5em
+
+    @include transition(all .1s ease-in-out)
+
+.tags-expo
+    &:target:before
+        content: ""
+        display: block
+        height: 72px
+        /* fixed header height*/
+        margin: -72px 0 0
+        /* negative fixed header height */
+
+    h4
+        margin-top: 0
+        margin-bottom: $xxsmall-spacing
+
+        i
+            font-size: 1em
+
+    .tags-expo-list
+        padding: 0em 0 2em
+        font-size: 1em
+
+        +media($tablet-small)
+            font-size: rem(18)
+
+        .post-tag
+            margin: .2em .3em
+
+    .tags-expo-section
+        ul
+            list-style-type: circle
+            list-style-position: inside
+            padding: 0
+            li
+                @include transition(all .1s ease-in-out)
+                padding: 0 1rem
+
+                &:hover
+                    list-style-type: disc
+                    padding: 0 .5rem
+    a
+        text-decoration: none
+
+    .post-date
+        display: inline-block
+        font-size: 80%
+        color: $medium-gray-color
+        margin: 0
+        padding: 0
+
+    font-family: $base-font-family
+
+aside
+    position: relative
+    top: 2px
+    margin: 0
+    width: 25%
+    float: right
+    font-weight: 300
+    color: $medium-gray-color
+    text-align: right
+    transition: all ease-in-out .2s
+    font-size: 1.6rem
+
+.item:hover .url aside
+    color: $dark-gray-color
+
+
+.page-tags
+    margin-top: 125px
+
+    > .list
+        border-top: 1px solid $medium-gray-color
+        margin-top: 30px
+        padding-top: 40px
+        position: relative
+
+        &:before
+            display: block
+            content: " "
+            width: 7px
+            height: 7px
+            border: $medium-gray-color 1px solid
+            position: absolute
+            top: -5px
+            left: 50%
+            margin-left: -5px
+            background: #FFF
+            box-shadow: #FFF 0 0 0 5px
+            border-radius: 3px
+
+.page-tags > .list
+    > .item
+        font-weight: 300
+        text-transform: uppercase
+        text-align: center
+        margin-bottom: 6rem
+        -webkit-font-smoothing: antialiased
+        text-rendering: optimizeLegibility
+        padding: 3px 9px
+        border-radius: 3px
+        font-size: 1.3rem
+        background: $light-gray-color
+        color: $base-font-color
+        letter-spacing: 1px
+        margin: 0 0.5rem 1rem
+        text-decoration: none
+        display: inline-block
+
+
+.tag-list > .list
+    padding: 0
+
+    > .item
+        display: block
+        width: 80%
+        margin: 0 10%
+
+    > .item > .url
+        width: 100%
+        height: 100%
+        display: block
+        padding: 20px 0
+        text-decoration: none
+
+    > .item > .url > .title
+        margin: 0
+        width: 75%
+        font-weight: 400
+        transition: all ease-in-out .2s
+        font-size: 1.6rem
+
+    > .item:hover > .url > .title
+        color: $dark-gray-color
+
+    // maybe we can't nest html5 elements
+    // can you help me?
+    aside
+        position: relative
+        top: 2px
+        margin: 0
+        width: 25%
+        float: right
+        font-weight: 300
+        color: $dark-gray-color
+        text-align: right
+        transition: all ease-in-out .2s
+        font-size: 1.6rem
+
+    .item:hover .url aside
+        color: $dark-gray-color

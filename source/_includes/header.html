@@ -1,28 +1,106 @@
+<style>
+header nav ul li:hover .children { display: block;  }
+header nav ul li .children { display: none; background: #fff; position: absolute; z-index: 1000; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); }
+header nav ul li .children span { display: none; }
+header nav ul li .children li { display: block; width: 100%; text-align: left; float: none; }
+header nav ul li .children li a { width: 100%; }
+header nav ul li .fa-angle-down { position: relative; top: 3px; }
+header nav ul li ul li:first-child { padding-top: 5px; }
+
+@media all and (max-width: 768px) {
+    header nav ul li:hover .children { display: block; }
+	header nav ul li .children { display: none; background: inherit; width: 100%; position: relative; overflow: hidden; box-shadow: none; }
+	header nav ul li .children span { display: none; }
+    header nav ul li .children li { text-align: inherit; }
+	header nav ul li .children a { font-size: 1.5rem; margin-left: 0px; padding: 5px 0; }
+	header nav ul li .fa-angle-down { position: relative; top: 3px; }
+    header nav ul li ul li:first-child { padding-top: 5px; }
+}
+</style>
+<!--@media all and (max-width: 800px) {
+    header nav ul li:hover .children { display: none; }
+	header nav ul li .children { width: 100%; position: relative; overflow: hidden; display: none; }
+	header nav ul li ul li:first-child { border-top: 1px solid #ffffff99; }
+	header nav ul li .children span { display: inline-block; margin-right: 0px; }
+	header nav ul li .children a { margin-left: 10px; padding: 5px 0; }
+	header nav ul li .fa-angle-down { position: relative; top: 3px; }
+}
+-->
+
 <header class="site-header">
   <div class="container">
     <input type="checkbox" id="toggleNavbar">
-    <h1 class="logo">
-        <a href="{{ "/" | prepend: site.baseurl }}"><span class="first">clarissa</span><span class="last">podell</span></a></h1>
-    <label for="toggleNavbar" role="button" class="toggle-navbar-button">
-      <i class="icon icon-menu"></i>
-      <i class="icon icon-cross"></i>
-    </label>
-    <nav class="navbar">
-      <ul>
-        <li><a href="{{ '/' | prepend: site.baseurl }}" title="Home">Home</a></li>
-        <li><a href="{{ '/' | prepend: site.baseurl }}about" title="About">About</a></li>
-        <li><a href="{{ '/' | prepend: site.baseurl }}blog" title="Blog">Blog</a></li>
-        <li><a href="{{ '/' | prepend: site.baseurl }}icons" title="Icons">Icons</a></li>
-        <li><a href="{{ '/' | prepend: site.baseurl }}links" title="Links">Links</a></li>
-        <li><a href="{{ '/' | prepend: site.baseurl }}contact" title="Contact">Contact</a></li>
-        <li><a href="{{ '/' | prepend: site.baseurl }}cv" title="CV">cv</a></li>
-        <!--<li><a href="{{ site.baseurl }}/images/Resume.pdf" title="Download Resume">Resume</a></li>
-         {% for item in site.navbar %}
-          <li><a href="{{ '/' | prepend: site.baseurl }}{{ item.slug }}" title="{{ item.title }}">{{ item.title }}</a></li>
-        {% endfor %}
-         <li><a href="{{ site.repo }}/archive/master.zip" title="Download">Download</a></li>
-         <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank"><i class="icon icon-rss"></i></a></li> -->
-      </ul>
+     <h1 class="logo">
+        <a href="{{ "/" | prepend: site.baseurl }}"><span class="first">clarissa</span><span class="last">podell</span></a>
+     </h1>
+     <label for="toggleNavbar" role="button" class="toggle-navbar-button">
+        <i class="icon icon-menu"></i>
+        <i class="icon icon-cross"></i>
+     </label>
+
+<nav class="navbar">
+  <ul>
+    <li><a href="{{ '/' | prepend: site.baseurl }}about" title="About">About</a></li>
+
+    <li class="sub-menu"><a href="{{ '/' | prepend: site.baseurl }}blog" title="Blog">Blog <i class="fas fa-angle-down"></i></a>
+    <ul class="children">
+        <li><a href="{{ '/' | prepend: site.baseurl }}tags" title="tags"><span>-</span> Tags</a></li>
+        <li><a href="{{ '/' | prepend: site.baseurl }}category" title="categories"><span>-</span> Categories</a></li>
+    </ul>
+</li>
+
+    <li><a href="{{ '/' | prepend: site.baseurl }}links" title="Links">Links</a></li>
+    <li><a href="{{ '/' | prepend: site.baseurl }}contact" title="Contact">Contact</a></li>
+    <li><a href="{{ '/' | prepend: site.baseurl }}resume" title="resume">Resume</a></li>
+    <!--<li><a href="{{ '/' | prepend: site.baseurl }}icons" title="Icons">Icons</a></li>
+    <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank"><i class="icon icon-rss"></i></a></li> -->
+
+    <span class="nav-icons">
+         {% include svg-icons.html %}
+         <ul id="icons02" class="icons">
+             <li><a class="n01" href="mailto:{{ site.author.email | encode_email }}"><svg><use xlink:href="#icon-90a"></use></svg><span class="label">Email</span></a></li>
+             <li><a class="n01" href="tel:{{ site.author.mobile }}"><svg><use xlink:href="#icon-90c"></use></svg><span class="label">Mobile</span></a></li>
+             <li><a class="n01" href="{{ site.author.linkedin }}"><svg><use xlink:href="#icon-90b"></use></svg><span class="label">LinkedIn</span></a></li>
+             <li><a class="n01" href="{{ site.author.github }}"><svg><use xlink:href="#icon-907"></use></svg><span class="label">GitHub</span></a></li>
+         </ul>
+     </span>
+
+       </ul>
     </nav>
   </div>
 </header>
+
+<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+<!--
+<script>
+$(document).ready(function(){
+var val = 1;
+$(".nav-bar").click(function(){
+if (val == 1) {
+$("header nav").animate({
+'left' : '0'
+});
+val = 0;
+} else{
+val = 1;
+$("header nav").animate({
+'left' : '-100%'
+});
+}
+return false;
+});
+// submenu
+$('.sub-menu').click(function(){
+$(this).children('.children').slideToggle();
+})
+});
+</script>
+-->
+<script>
+$(document).ready(function(){
+  // submenu
+  $('.sub-menu').click(function(){
+  	$(this).children('.children').slideToggle();
+  })
+});
+</script>

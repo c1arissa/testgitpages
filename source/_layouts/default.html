@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   {% include head.html %}
+  {% seo %}
+  {% if page.mathjax %}
+    {% include mathjax.html %}
+  {% endif %}
 </head>
 <body>
   {{ content }}
-
-<!-- highlight.js
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-{% for language in site.highlightLanguages %}
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/{{ language }}.min.js"></script>
-{% endfor %}
-<script>hljs.initHighlightingOnLoad();</script>-->
 </body>
 </html>

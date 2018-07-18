@@ -1,0 +1,178 @@
+<!--<style>
+.icons {
+        cursor: default;
+        padding: 0;
+        letter-spacing: 0;
+        /*font-size: 1.125em;*/
+        font-size: 1.125em;
+        width: calc(100% + 1.25rem);
+        margin-left: -0.625rem;
+        }
+.icons li {
+        display: inline-block;
+        vertical-align: middle;
+        /*margin: 0.625rem;*/
+        margin: 0.325rem;
+        }
+.icons li a {
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        -moz-align-items: center;
+        -webkit-align-items: center;
+        -ms-align-items: center;
+        align-items: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        -ms-justify-content: center;
+        justify-content: center;
+        border-radius: 100%;
+        width: 2em;
+        height: 2em;
+        }
+.icons li a svg {
+        display: block;
+        -moz-transition: fill 0.25s ease;
+        -webkit-transition: fill 0.25s ease;
+        -ms-transition: fill 0.25s ease;
+        transition: fill 0.25s ease;
+        }
+.icons li a .label {
+        display: none;
+        }
+#icons01 li a svg {
+        width: 60%;
+        height: 60%;
+        }
+#icons01 .n01 svg {
+        fill: #9A9A9A;
+        }
+#icons01 .n01 {
+        border: solid 1px #9A9A9A;
+        }
+#icons01 .n01:hover {
+        border-color: #9B4DCA;
+        }
+#icons01 .n01:hover svg {
+        fill: #9B4DCA;
+        }
+#icons01 .n02 svg {
+        fill: #9A9A9A;
+        }
+#icons01 .n02 {
+        border: solid 1px #9A9A9A;
+        }
+#icons01 .n02:hover {
+        border-color: #9B4DCA;
+        }
+#icons01 .n02:hover svg {
+        fill: #9B4DCA;
+        }
+#icons01 .n03 svg {
+        fill: #9A9A9A;
+        }
+#icons01 .n03 {
+        border: solid 1px #9A9A9A;
+        }
+#icons01 .n03:hover {
+        border-color: #9B4DCA;
+        }
+#icons01 .n03:hover svg {
+        fill: #9B4DCA;
+        }
+#icons01 .n04 svg {
+        fill: #9A9A9A;
+        }
+#icons01 .n04 {
+        border: solid 1px #9A9A9A;
+        }
+#icons01 .n04:hover {
+        border-color: #9B4DCA;
+        }
+#icons01 .n04:hover svg {
+        fill: #9B4DCA;
+        }
+#icons01 .n05 svg {
+        fill: #9A9A9A;
+        }
+#icons01 .n05 {
+        border: solid 1px #9A9A9A;
+        }
+#icons01 .n05:hover {
+        border-color: #9B4DCA;
+        }
+#icons01 .n05:hover svg {
+        fill: #9B4DCA;
+        }
+#icons01 .n06 svg {
+        fill: #9A9A9A;
+        }
+#icons01 .n06 {
+        border: solid 1px #9A9A9A;
+        }
+#icons01 .n06:hover {
+        border-color: #9B4DCA;
+        }
+#icons01 .n06:hover svg {
+        fill: #9B4DCA;
+        }
+
+@media (max-width: 360px) {
+    #icons01 {
+        width: calc(100% + 0.9375rem);
+        margin-left: -0.46875rem;
+    }
+    #icons01 li {
+        margin: 0.46875rem;
+    }
+}
+</style>
+-->
+
+{% include svg-icons.html %}
+
+<ul id="icons01" class="icons">
+<li>
+<a class="n01" href="mailto:{{ site.author.email | encode_email }}">
+<svg><use xlink:href="#icon-90a"></use></svg>
+<span class="label">Email</span>
+</a>
+</li>
+
+<li>
+<a class="n02" href="tel:{{ site.author.mobile }}">
+<svg><use xlink:href="#icon-90c"></use></svg>
+<span class="label">Mobile</span>
+</a>
+</li>
+
+<li>
+<a class="n03" href="{{ site.author.github }}">
+<svg><use xlink:href="#icon-907"></use></svg>
+<span class="label">GitHub</span>
+</a>
+</li>
+
+<li>
+<a class="n04" href="{{ site.author.linkedin }}">
+<svg><use xlink:href="#icon-90b"></use></svg>
+<span class="label">LinkedIn</span>
+</a>
+</li>
+
+<li>
+<a class="n05" href="http://codecademy.com">
+<svg><use xlink:href="#icon-95b"></use></svg>
+<span class="label">Codecademy</span>
+</a>
+</li>
+
+<li>
+<a class="n06" href="{{ site.author.url }}">
+<svg><use xlink:href="#icon-9b8"></use></svg>
+<span class="label">Globe</span>
+</a>
+</li>
+
+</ul>

@@ -5,14 +5,44 @@
 .post
   display: table
 
+  &-date
+      display: block
+      margin-top: -.5rem
+      margin-bottom: $xsmall-spacing
+      color: #9a9a9a
+
   &-meta
-    font-size: 95%
+    font-size: 90%
     //font-weight: 300
-    padding-left: 5px
+    padding: 0.5em 0em
+    margin-top: 0
+    margin-bottom: 0
+    text-transform: uppercase
+
+    +media($tablet-small)
+        font-size: 1em
 
     &-list
         font-weight: 300
         text-transform: none
+        margin-bottom: 5px
+
+    &-tag
+        background: $light-gray-color
+        color: $base-font-color
+        font-weight: normal
+        padding: 0px 2px
+        margin-right: 5px
+        display: inline-block
+        border-radius: 0px
+        border: 1px solid $light-gray-color
+        font-size: 1.1rem
+        +media($tablet-small)
+            font-size: 1.2rem
+
+        &:hover
+            background-color: $primary-color
+            color: white
 
   &-thumbnail
     &, img
@@ -28,27 +58,40 @@
       border: $base-border
 
   .read-more
-    color: lighten($action-color, 10%)
+    display: inline-block
+    color: tint($primary-color, 10%)
     font-weight: bold
-
-  .bullet::before
-    content: "•"
     font-size: 1em
-    padding-left: 10px
-    padding-right: 10px
+    //margin-top: .3em
+    text-align: right
+    a
+        &:hover
+            font-color: shade($primary-color, 10%)
+
+    &:before
+        content: "\f055"
+        font-family: FontAwesome
+        margin-right: 0.2em
+        vertical-align: middle
 
   &-header
-    margin-bottom: $big-spacing * 1.1
+    margin-bottom: $base-spacing
 
     &-list
-        margin-bottom: $xsmall-spacing
+        margin-bottom: 0
 
   &-title
-    margin-bottom: 0.3em
     margin-top: 0
+    margin-bottom: 1rem
 
   &-title-list
-      margin-bottom: 0
+      margin-top: 0
+      margin-bottom: $xsmall-spacing
+
+  &-blog-title
+      margin-top: 0
+      margin-bottom: $xxsmall-spacing
+      line-height: 1.1
 
   &-list
     .post
@@ -62,6 +105,7 @@
         &:focus
           color: $primary-color
 
+// BLOG INDEX.HTML
 .post-list
   .post
     &-content,
@@ -91,12 +135,26 @@
       +media($tablet-small)
           padding: 0 0 0 $base-spacing
 
+
+// TAGS
 .tags,
 .fa-tags
     color: $base-font-color
     display: inline-block
-    margin-top: 8px
+    //margin-top: 8px
     //font-size: .8rem
+
+.tags::before
+    content: ""
+    padding: 0px 0px
+
+    +media($tablet-small)
+        content: $icon-price-tag
+        padding: 0px 0px
+        font-family: 'end2end'
+        src: url("#{$icon-font-path}/end2end.ttf?cgaqog") format("truetype"), url("#{$icon-font-path}/end2end.woff?cgaqog") format("woff"), url("#{$icon-font-path}/end2end.svg?cgaqog#end2end") format("svg")
+        font-size: 90%
+        opacity: .85
 
 .tag
     display: inline-block
@@ -119,36 +177,392 @@
 .tag-count
     margin-left: 3px
 
+.footer-section-title
+    font-size: 14px
+    font-weight: 900
+    letter-spacing: 1px
+    color: $medium-gray-color
+    margin: 2.0em 0 .6em 0
+    text-transform: uppercase
+    //font-family: "Lato", Arial, serif
+
+// POST DETAILS AT BOTTOM OF POST
+.details
+    padding-top: 1em
+    padding-left: 10px
+    padding-right: 10px
+    font-weight: 400
+    font-size: 0.850em
+    line-height: 1.9
+    color: $medium-gray-color
+    display: block
+
+    &-list
+        list-style: none
+        list-style-position: outside
+        padding-left: 0px
+        margin: 0
+        padding-bottom: 0.5em
+
+    h3
+        margin: .6em 0 .6em 0
+
+    h4
+        text-align: center
+
+        +media($tablet-small)
+            text-align: left
+
+    li a
+        padding: 4px 8px
+        margin-right: 10px
+        border: 1px solid #DDE4E6
+        border-radius: 4px
+        text-transform: uppercase
+        font-weight: 800
+        color: #6A7686
+
+        &:hover
+            background: $primary-color
+            color: white
+            border: 1px solid $primary-color
+
+    .meta-tags
+        background: $light-gray-color
+        color: $base-font-color
+        font-weight: normal
+        text-transform: uppercase
+        padding: 0px 2px
+        margin-right: 5px
+        display: inline-block
+        border-radius: 0px
+        border: 1px solid $light-gray-color
+        font-size: 0.7em
+
+        &:hover
+            background-color: tint($base-font-color, 25%)
+            color: white
+
+    i
+        color: $gray
+        font-size: 90%
+        margin-right: 8px
+
 .line
     border-bottom: $base-border
     padding-top: 2.5rem
     margin-left: auto
     margin-right: auto
 
+// NAVIGATION LINKS
+.post-nav
+    @extend %clearfix
+    padding: 1em 0 2em
+    overflow: auto
+    margin-left: -10px
+    margin-right: -10px
+
+    &::after
+        clear: both
+
+    h4
+        font-size: 14px
+        font-weight: 900
+        letter-spacing: 1px
+        color: $medium-gray-color
+        margin: 1.0em 0 .4em 0
+        //font-family: "Lato", Arial, serif
+
+    .left-nav
+        float: left
+        text-align: left
+        max-width: 50%
+        padding-left: 20px
+        padding-right: 20px
+
+    .right-nav
+        float: right
+        text-align: right
+        max-width: 50%
+        padding-left: 20px
+        padding-right: 20px
+
+    .nav-links
+        font-size: 90%
+        font-weight: 300
+        line-height: 1.4
+        margin-top: 0px
+        text-transform: uppercase
+        overflow-wrap: break-word
+        word-break: break-all
+        word-wrap: break-word
+        +media($tablet-small)
+            font-size: 1em
+
+        &:hover
+            font-weight: 400
+
+    .prev
+        margin-right: .4em
+
+    .next
+        margin-left: .4em
+
+//
+// ------------ RELATED SECTION ------------
+//
 .related
-    padding-top: 2rem
-    padding-bottom: 2rem
-    border-top: 0px solid #eee
+    padding: 0em 10px 0em
+    //border-top: 1px solid #eee
 
 .related-posts
-    padding-left: 1px
+    padding-left: 0
     list-style: none
+    margin: .2em 0 0em
+    line-height: 1.8
+    font-size: 1em
+
+    //.date-style
+        font-size: 90%
+        color: $medium-gray-color
 
     h3
-        margin-top: 0
+        margin: 2.0em 0 .6em 0
 
-    li
-        small
-            font-size: 75%
-            color: #999
+    h6
+        margin: 0
 
-    li
-        a
-            &:hover
-                color: #268bd2
-
-.related-posts
     li a
-        &:hover,
-        small
-            color: inherit
+        display: inline-block
+        margin-bottom: .2em
+        line-height: 1.2
+        font-size: 1.2em
+        text-transform: uppercase
+        font-weight: 300
+        //color: #6A7686
+
+    li small
+        font-size: 75%
+        color: #999
+
+    li a:hover
+        text-decoration: none
+        font-weight: 400
+
+    li a:hover small
+        color: inherit
+//
+// ------------ RELATED SECTION ------------
+//
+
+.nav-single,
+.navigation
+    font-size: .8em
+    overflow: auto
+
+.nav-single
+    padding: 3em 0
+
+.nav-single a
+    font-size: 1.4em
+    text-transform: uppercase
+    font-weight: 300
+    line-height: 1.4
+
+.nav-single .meta-nav
+    margin-right: .6em
+
+.nav-single .nav-next .meta-nav
+    margin-left: .6em
+    margin-right: 0
+
+.nav-single .nav-next
+    text-align: right
+
+.nav-single h4
+    font-size: 14px
+    font-weight: 900
+    letter-spacing: 1px
+    color: #DDE4E6
+
+.navigation
+    padding: 3em 0
+
+.navigation div
+    width: 50%
+    float: left
+
+.navigation a
+    display: inline-block
+    padding: 1.5em 2.0em
+    border: 2px solid #DDE4E6
+    border-radius: 4px
+    font-weight: 800
+    text-transform: uppercase
+
+.navigation .nav-next
+    text-align: right
+
+.navigation .meta-nav
+    margin-right: .5em
+
+.navigation .nav-next .meta-nav
+    margin-left: .5em
+    margin-right: 0
+
+.col-md-6
+    padding-left: 30px
+    padding-right: 30px
+
+    +media($desktop)
+        padding-left: 20px
+        padding-right: 20px
+
+.pr-none
+    padding-right: 0 !important
+
+.pl-none
+    padding-left: 0 !important
+
+.row
+    margin-left: -20px
+    margin-right: -20px
+
+#markdown-toc::before
+    content: "Table of Contents"
+    font-size: 3rem
+    font-weight: bold
+
+#markdown-toc ul
+    /*list-style: decimal;*/
+    list-style: none
+
+#markdown-toc
+    border: 1px solid #aaa
+    padding: 1.5em
+    list-style: decimal
+    display: inline-block
+
+.section-nav::before
+    content: "Contents"
+    margin-left: -3px
+    font-size: 1.5rem
+    font-weight: bold
+
+.section-nav
+    border: 1px solid #dedede
+    padding: 1.5em
+    display: inline-block
+    list-style: none
+    list-style-position: inside
+    margin-top: 2em
+    margin-bottom: 2em
+
+li.toc-h1
+    list-style-type: decimal
+    color: $base-font-color
+    margin-right: 8px
+
+li.toc-h2
+    list-style-type: disc
+    font-weight: normal
+
+    &::before
+        margin-right: 8px
+
+li.toc-h3
+    list-style-type: circle
+    font-weight: normal
+
+    &::before
+        margin-right: 8px
+
+li.toc-h4
+    list-style-type: square
+    font-weight: 400
+
+li.toc-h4::before
+    margin-right: 8px
+
+li.toc-h5
+    list-style-type: disc
+    padding-left: 10px
+    font-weight: 400
+
+/* ABOUT THE AUTHOR */
+.about-author
+    padding: 1em 0em
+    text-align: center
+
+    +media($tablet-small)
+        padding: 1em 10px
+        text-align: inherit
+
+    h3
+        font-size: 14px
+        font-weight: 900
+        letter-spacing: 1px
+        color: $medium-gray-color
+        font-family: $base-font-family
+
+    h4
+        font-size: 1.00em
+        margin: 2.0em 0 .6em 0
+
+.author-bio
+    @extend %clearfix
+    padding: 1.4em 0
+    border: 1px solid $light-gray-color
+    border-right: 0
+    border-left: 0
+
+.author-img
+    float: none
+    width: auto
+    height: auto
+    vertical-align: middle
+    text-align: center
+
+    +media($tablet-small)
+        //width: 126px
+        //height: 126px
+        //margin-right: 10px
+        padding: .5em 0
+        margin-top: auto
+        margin-bottom: auto
+        vertical-align: middle
+        float: left
+        width: 20%
+
+    img
+        vertical-align: middle
+        display: block
+        margin: 0 auto 1em auto
+        max-width: 96px
+        border-radius: 50%
+
+        +media($tablet-small)
+            margin: 0 auto
+            vertical-align: middle
+
+.author-info
+    float: none
+
+    +media($tablet-small)
+        float: right
+        width: 80%
+        padding: .5em 0
+        vertical-align: middle
+
+    .author-name
+        text-transform: uppercase
+        font-weight: 800
+        margin-bottom: .4em
+        color: $primary-color
+
+.author-info p
+    font-size: .9em
+    //margin: .4em 0
+
+.author-info *:first-child
+    margin-top: 0

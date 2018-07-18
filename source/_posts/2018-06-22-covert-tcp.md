@@ -4,6 +4,7 @@ title:  "Lab 1: Covert Channels using Covert TCP"
 author: Clarissa Podell
 date:   2018-06-22
 comments: false
+toc: true
 categories: lab, networking
 tags:
    - networking

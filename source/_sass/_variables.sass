@@ -1,8 +1,6 @@
 // Typography
-$base-font-family: "Open Sans", "Lato", sans-serif
-$heading-font-family: "Raleway", "Montserrat", $helvetica
-$fontSans: "Helvetica Neue", Helvetica, Arial, sans-serif
-$fontMonospace: "Consolas", Liberation Mono, Menlo, Courier, monospace
+$base-font-family: "Lato", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+$heading-font-family: "Raleway", "Roboto", $helvetica, "Montserrat", sans-serif
 
 // Font Sizes
 $unit-font-size: 16px
@@ -21,8 +19,18 @@ $font-weight-bold: 700
 $base-spacing: $base-line-height * 1em
 $small-spacing: $base-spacing / 2
 $xsmall-spacing: $base-spacing / 3
+$xxsmall-spacing: $base-spacing / 4
+$med-spacing: $base-spacing * 1.5
 $big-spacing: $base-spacing * 2.5
 $base-z-index: 0
+
+// Font sizes
+$size-1: 2.5rem
+$size-2: 2rem
+$size-3: 1.75rem
+$size-4: 1.5rem
+$size-5: 1.25rem
+$size-6: 1rem
 
 // Colors
 $primary-color: #9b4dca
@@ -32,9 +40,15 @@ $blue-color: #477dca
 $dark-gray-color: #232323
 $medium-gray-color: #9a9a9a
 $light-gray-color: #dedede
+$lighter-gray-color: #BFC5CD
+$gray: #6A7686
+$blue-1: #008C92
+$blue-2: #00B5B6
+$light-purple: #C188E0
 
 // Font Colors
-$base-font-color: lighten($dark-gray-color, 25%)
+$base-font-color: #345
+$gray-color: lighten($dark-gray-color, 25%)
 $action-color: $primary-color
 
 // Border
@@ -60,6 +74,23 @@ $phone-large: 420px
 $tablet-small: 768px
 $tablet: 1024px
 $desktop: 1240px
+
+$sm-device: 768px
+$sm-device-width: 750px
+$med-device: 992px
+$med-device-width: 970px
+$lg-device: 1200px
+$lg-device-width: 1170px
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+$small: 600px
+/* Medium devices (landscape tablets, 768px and up) */
+$medium: 768px
+/* Large devices (laptops/desktops, 992px and up) */
+$medium-wide: 992px
+$large: 1024px
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+$xlarge: 1200px
 
 // Radius
 $small-border-radius: 3px

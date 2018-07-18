@@ -150,3 +150,5 @@ def strtag(str_tags)
 
   return tags
 end
+
+load 'tasks/emoji.rake'

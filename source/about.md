@@ -4,7 +4,9 @@ title: About
 permalink: /about/
 ---
 
-Hi, I'm Clarissa and I live in New York.
+Hi, I'm Clarissa! I live in New York :statue_of_liberty: and :heart: :coffee: and :computer:'s!  Hah! No but really, on a serious note,
+
+Blog to document my journey in cybersecurity.  A compilation of projects and labs from my senior capstone course and some side projects and interests.  Here I write about things that are interesting to me and put whatever information people may want to know about me.
 
 {% comment %} While in school I realized the best way for me to learn something was to research how it works, write a tutorial that covers the main concepts, and then put it online for me to reference when needed. {% endcomment %}
 
@@ -16,7 +18,7 @@ You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://gi
 
 <div class="floated">
 <img class="normal" src="/testgitpages/images/kravmaga.jpg" alt="Alt Text"><br>
-Active Shooter Defense seminar at <b>BLITZ KRAV MAGA</b> in Hicksville, NY. Mike Blitz (owner) on the left and Mike Cohen on the right.
+<figcaption> Active Shooter Defense seminar at <b>BLITZ KRAV MAGA</b> in Hicksville, NY. Mike Blitz (owner) on the left and Mike Cohen on the right.</figcaption>
 <!-- <figcaption class="caption">Active Shooter Defense seminar at <b>BLITZ KRAV MAGA</b> in Hicksville, NY. Mike Blitz (owner) on the left and Mike Cohen on the right.</figcaption> -->
 </div>
 
@@ -29,7 +31,7 @@ Active Shooter Defense seminar at <b>BLITZ KRAV MAGA</b> in Hicksville, NY. Mike
 <a href="{{ '/images/Resume.pdf' | prepend: site.baseurl }}" class="button button-ghost" title="resume">Download my Résumé</a>
 
 ### About This Website
-This website is built on [Jekyll](http://jekyllrb.com/), an open source static site generator, and hosted using GitHub Pages.  The theme was forked from [end2end]() with modifications made by me using the Atom editor with GitHub plugin on my desktop.  I used Atom editor with GitHub on my desktop to add and edit content.  Fonts are served through [Google Fonts](https://fonts.google.com/) and Icons through [Font Awesome]().  This site is responsive and uses HTML and CSS written in Sass.  Favicon generated with [Real Favicon Generator](https://realfavicongenerator.net).
+This website was built locally on [Jekyll](http://jekyllrb.com/), an open source static site generator, and hosted by GitHub Pages.  I forked this theme from [end2end]() and used the Atom editor with GitHub integration / plugin on my desktop to customize the layout and add content.  Fonts are served through [Google Fonts](https://fonts.google.com/) and Icons through [Font Awesome](https://fontawesome.com) and [Octicons]().  This site is responsive and uses HTML and CSS written in Sass.  Favicon made by me and generated with [Real Favicon Generator](https://realfavicongenerator.net).  This website was built responsively using HTML5 and CSS in Sass.
 
 This website was built responsively using HTML5, CSS and some jQuery magic. For the CMS, I'm currently using WordPress as the CMS, but am thinking of using Jekyll on my next build. Fonts are served through Google Fonts. For the photo grid, I'm using Masonry (Thanks David DeSandro), and for the lightbox, I decided to customize this jQuery plugin by Osvaldas Valutis. All photos on the website were taken by me.
 

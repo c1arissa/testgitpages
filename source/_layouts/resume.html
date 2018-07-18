@@ -1,0 +1,194 @@
+---
+layout: pages
+---
+
+<article role="article" class="page card">
+<section class="resume">
+
+<!------ HEADER ------>
+<div class="header">
+
+<!------ LEFT HEADING ------>
+<div class="header-left">
+<h1 class="name">Clarissa Podell</h1>
+<h4 class="subheading">Recent Cybersecurity graduate</h4>
+</div>
+
+<!------ RIGHT HEADING ------>
+<div class="header-right">
+
+<ul class="contact-list">
+<li><span class="icon phone"></span> 631-708-2725</li>
+<li><span class="icon email"></span> <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+<li><span class="icon linkedin"></span> <a href="{{ site.author.linkedin }}">clarissapodell</a></li>
+<li><span class="icon web"></span> <a href="https://clarissapodell.com">clarissapodell</a></li>
+<li><span class="icon address"></span> Valley Stream, NY 11580</li>
+</ul>
+
+</div>
+
+</div>
+
+
+<!------ CONTACT
+<h2 class="section-title"><span><i class="fas fa-envelope"></i>Contact</span></h2>
+
+<ul class="contact-list">
+<li><i class="fas fa-mobile-alt fa-fw fa-lg"></i> 631-708-2725</li>
+<li><i class="fas fa-at fa-fw fa-lg"></i> <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+<li><i class="fab fa-linkedin fa-fw fa-lg"></i> <a href="{{ site.author.linkedin }}">clarissapodell</a></li>
+<li><i class="fas fa-globe fa-fw fa-lg"></i> <a href="https://clarissapodell.com">clarissapodell.com</a></li>
+<li><i class="fas fa-location-arrow fa-fw fa-lg"></i> Valley Stream, NY 11580</li>
+</ul> ------>
+
+<div class="hrule big-spacing"></div>
+
+<a class="button button-ghost" href="{{ '/' | prepend: site.baseurl }}contact" title="Contact">Contact Me</a>
+<a class="button button-ghost" href="{{ '/images/Resume.pdf' | prepend: site.baseurl }}" title="resume">Download my Résumé</a>
+
+<!------ SUMMARY------>
+<h2 class="section-title"><span><i class="fas fa-user"></i>SUMMARY</span></h2>
+
+<p>
+Cybersecurity graduate with interests in Vulnerability Research, Binary Exploitation, Reverse Engineering, and Exploit Mitigation.
+Experience collaborating in groups and competence in real-world environments through online CTF/wargame challenges and coursework using DETERLab testbeds.
+Seeking career opportunity to collaborate with like-minded individuals.
+<p>
+
+<!------ EDUCATION ------>
+<h2 class="section-title"><span><i class="fas fa-graduation-cap"></i>EDUCATION</span></h2>
+
+<!------ SCHOOL 1 ------>
+<h3 class="title">Bachelor of Science in Computer Science and Information Security</h3>
+
+<span class="subtitle">John Jay College of Criminal Justice, City University of New York (CUNY), New York, NY <span class="date">Jan 2016 &mdash; May 2018</span></span>
+<ul>
+    <li>GPA: 4.0 / 4.0</li>
+</ul>
+
+<!------ SCHOOL 2 ------>
+<h3 class="title">Bachelor of Science in Fashion Merchandising Management</h3>
+
+<span class="subtitle">Fashion Institute of Technology, State University of New York (SUNY), New York, NY <span class="date">Aug 2009 &mdash; May 2013</span></span>
+<p>GPA: 3.48 / 4.0</p>
+
+<!------ SKILLS ------>
+<h2 class="section-title"><span><i class="fas fa-wrench"></i>SKILLS</span></h2>
+
+<h3 class="category">Languages</h3>
+<div class="skills">
+<span class="skills-left">Programming/Scripting <small>(Strong)</small></span>
+<span class="skills-right"> Python, C, C++, LaTeX</span>
+</div>
+
+<div class="skills">
+<span class="skills-left">Programming/Scripting <small>(Familiar)</small></span>
+<span class="skills-right"> Perl, Assembly (x86 Intel), Bash, Standard ML</span>
+</div>
+
+<div class="skills">
+<span class="skills-left">Web</span>
+<span class="skills-right">HTML, CSS, SASS, Jekyll</span>
+</div>
+
+<h3 class="category">Systems</h3>
+<div class="skills">
+<span class="skills-left">Operating Systems</span>
+<span class="skills-right"> Windows and Linux (Debian, Ubuntu). Virtualization: Oracle VirtualBox, Deter Labs</span>
+</div>
+
+<h3 class="category">Software</h3>
+<div class="skills">
+<span class="skills-left">Debugging and Reversing</span>
+<span class="skills-right">GDB, WinDbg, Immunity Debugger, OllyDbg, IDA Pro (Free)</span>
+</div>
+
+<div class="skills">
+<span class="skills-left">Compilers</span>
+<span class="skills-right">MS Visual Studio C++, GCC, LLVM/Clang</span>
+</div>
+
+<div class="skills">
+<span class="skills-left">Networking</span>
+<span class="skills-right">Wireshark, tcpdump, netcat, nmap</span>
+</div>
+
+<div class="skills">
+<span class="skills-left">Hacking</span>
+<span class="skills-right">Metasploit Framework, Volatility Framework, Kali Linux Tool Suite</span>
+</div>
+
+<div class="skills">
+<span class="skills-left">Other</span>
+<span class="skills-right">VIM, GitHub, SVN</span>
+</div>
+
+<!------ PROJECTS ------>
+<h2 class="section-title"><span><i class="fas fa-code"></i>PROJECTS</span></h2>
+
+<h3 class="title">Bypassing Microsoft's Control Flow Guard (CFG)</h3>
+<span class="subtitle">Capstone in Cybersecurity | John Jay College of Criminal Justice <span class="date">Sep 2017 &#45; Present</span></span>
+<ul>
+    <li>Team lead of 4 person group in a year-long senior research project</li>
+    <li>Research vulnerabilities and design limitations in CFG that can be leveraged to circumvent security measures and demonstrate several exploits
+        on CFG-enabled binaries in Windows 10 that hijack control and gain arbitrary code execution.</li>
+    <li>Publication to be submitted in near future.</li>
+</ul>
+
+<h3 class="title">Electronic Health Record DApp</h3>
+<span class="subtitle">Faculty Mentored Research in Bitcoin & Blockchain | John Jay College of Criminal Justice <span class="date">Jan 2018 &#45; May 2018</span></span>
+<ul>
+    <li>Research funded by a National Science Foundation grant to develop a infrastructure for distributed health record storage with access
+        managed by a public blockchain.</li>
+    <li>Performed research, created presentations, and presented to panel of NSF judges.</li>
+</ul>
+
+<h3 class="title">Personal Blog and Website</h3>
+<span class="subtitle">Self-employed @ <a href="https://clarissapodell.com">clarissapodell.com</a> <span class="date">January 2018 &#45; Present</span></span>
+<ul>
+    <li>Built locally with Jekyll and hosted by GitHub pages.</li>
+    <li>Written in HTML and CSS in SASS.</li>
+    <li>Responsive design built for a range of devices! (small/large phones, tablets, laptops, desktops, etc.)</li>
+</ul>
+
+<!------ LAB WORK ------>
+<h2 class="section-title"><span><i class="fas fa-flask"></i>Lab Work</span></h2>
+
+<h3 class="title">Capstone in Cybersecurity and Digital Forensics (CSCI-400)</h3>
+<span class="subtitle">John Jay College of Criminal Justice, New York, NY <span class="date">Fall 2017</span></span>
+
+<dl>
+ <dt>Steganography Lab</dt>
+ <dd>Embedded covert messages into network traffic using TCP headers.  <a href="{{ site.baseurl }}/blog/2018/covert-tcp">Link to blog post</a>.</dd>
+
+ <dt>Cryptography Labs</dt>
+ <dd>Factored weak 1024-bit RSA moduli by finding a common divisor and reconstructed the private key to decrypt SSL/TLS traffic.  <a href="{{ site.baseurl }}/blog/2018/lab2">Click to read more</a>.</dd>
+ <dd>Cracked password hashes with dictionary attacks using Hashcat & John the Ripper</dd>
+ <dd>Decrypted SSL traffic with MiTM attacks on Ettercap.</dd>
+</dl>
+
+\item[\lab{Intrusion Detection Systems Lab:}] Configured Snort and OSSEC on a small DETER testbed network and developed signatures \& rules.  Evaluated IDS by creating forged packet streams with Scapy to trigger alerts.\\[1pt]
+\item[\lab{Denial of Service Lab:}] Deployed a SYN flood attack between two testbed nodes \& analyzed tcpdump attack traffic to calculate TCP connection durations.\\[1pt]
+\item[\lab{Malware Lab:}] Wrote a proof-of-concept Command \& Control botnet (master and worker) in Python.  Commands: download website, send spam, \& send files from host of choice.\\[1pt]
+\item[\lab{Exploits Lab:}] Wrote scripts to exploit a buffer overflow in web server software and a remote directory traversal vulnerability in perl cgi code.  Created patches to fix the bugs.\\[1pt]
+\item[\lab{OS-Specific security Lab:}] Wrote an exploit in C to bypass Ubuntu's address space layout randomization protection on a binary with a buffer overflow vulnerability.
+
+
+
+<!------ AWARDS ------>
+<h2 class="section-title"><span><i class="fas fa-trophy"></i>AWARDS</span></h2>
+
+<h3 class="title">Ruth S. Lefkowitz Mathematics Prize</h3>
+<span class="subtitle">John Jay College of Criminal Justice <span class="date">May 2018</span></span>
+<ul>
+    <li>Award presented to one graduating senior for outstanding academic performance in the Computer Science & Information Security major.</li>
+</ul>
+
+<h3 class="title">Cornell University's Women in Technology & Entrepreneurship in New York (WiTNY) Scholarship</h3>
+<span class="subtitle">John Jay College of Criminal Justice <span class="date">2017 - 2018</span></span>
+<ul>
+    <li>Scholarship for promising female students in technology-related disciplines.</li>
+</ul>
+
+</section>
+</article>

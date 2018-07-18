@@ -3,7 +3,7 @@
   padding: 0
   margin: 0
   border-bottom: 1px solid rgba($light-gray-color, .5)
-  +position(fixed, 0 0 null 0)
+  +position(relative, 0 0 null 0)
   min-height: 80px
   width: 100%
   z-index: 1000
@@ -14,6 +14,7 @@
     +position(relative, auto)
     padding: $base-spacing 0
     min-height: 35px
+    line-height: 35px
 
   .logo, a
     text-transform: lowercase
@@ -33,20 +34,25 @@
   margin: 0
   padding: 0
   float: left
-  font-family: $heading-font-family
-  font-size: 2.5rem
-  +position(fixed, $base-spacing null null $base-spacing)
+  font-family: 'Raleway', sans-serif
+  font-size: rem(24)
+  +position(relative, 1em null null 0)
   z-index: 100
-  letter-spacing: -.05rem
+  line-height: 35px
 
   +media($tablet-small)
-    padding: 5px 0
+    padding: 5px 0px
     +position(relative, auto)
 
-  .first
-    font-weight: 300
-    color: $medium-gray-color
+    //a
+      line-height: 35px
 
-  .last
-    font-weight: 700
-    color: $primary-color
+  span.first
+        font-weight: 300
+        color: $medium-gray-color
+        letter-spacing: 0.01em
+
+  span.last
+        font-weight: 700
+        color: $primary-color
+        letter-spacing: 0.01em

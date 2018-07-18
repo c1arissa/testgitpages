@@ -1,4 +1,15 @@
 
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+*:after,
+*::before
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
 html,
 body
   width: 100%
@@ -7,7 +18,7 @@ body
 body
   border-top: 5px solid $primary-color
   background: $base-background-color
-  padding-top: 75px
+  //padding-top: 75px
 
   +media($tablet-small)
     padding-top: 0
@@ -21,51 +32,57 @@ figure
   padding: $base-spacing 0
 
 .container
-  max-width: $phone-large
+  //max-width: $phone-large
+  max-width: 100%
   margin-left: auto
   margin-right: auto
   padding-left: $base-spacing
   padding-right: $base-spacing
 
   +media($tablet-small)
-    max-width: $tablet-small
+    max-width: 750px
+
+  +media($tablet)
+    max-width: 970px
 
   +media($desktop)
-    max-width: 960px
+    max-width: 970px
+
+  //+media($tablet-small)
+    max-width: $tablet-small
+
+  //+media($desktop)
+    padding-left: $base-spacing
+    padding-right: $base-spacing
+    max-width: 1170px
+    //max-width: 960px
 
 // NEWLY ADDED BELOW
 figcaption
     text-align: center
-    font-size: 90%
-    margin-top: 0
+    font-size: 80%
+    margin-top: 0px
     margin-bottom: 20px
+    font-weight: $font-weight-light
+    color: $gray
 
-//pre,
-//code
-    max-width: 100%
-    font-size: 0.85em
-    font-family: 'Monaco', Consolas,"Courier New", Menlo,Monaco,monospace
-    padding: .5em
-    //line-height: 1.25em
-    //white-space: pre-wrap
-    //overflow-wrap: break-word
-    //word-break: break-all
-    //word-wrap: break-word
-
-//code
-    padding: 2px 4px
-    font-size: 90%
-    color: #c7254e
-    background-color: #f9f2f4
-    border-radius: 4px
+.caption
+    position: relative
+    top: 5px
+    left: 0
+    right: 0
+    margin: 0 auto
+    width: 100%
+    font-size: 0.8rem
+    color: $medium-gray-color
 
 pre
     max-width: 100%
     overflow: auto
     overflow-x: auto
     margin: 20px auto
-    font-size: 0.9em
-    padding: .5em
+    //font-size: 0.9em
+    padding: 1em
     -webkit-overflow-scrolling: touch
     white-space: pre-wrap
     overflow-wrap: break-word
@@ -74,15 +91,21 @@ pre
 
     code
         border: 0
-        line-height: 1.15
-        font-family: 'Monaco', Consolas,"Courier New", Menlo,Monaco,monospace
-        //font-size: 0.9em
+        line-height: 1em
+        font-family: 'Menlo', 'Monaco', Consolas,"Courier New", Menlo,Monaco,monospace
         color: inherit
         background-color: transparent
         border-radius: 0
+        font-size: 12px
 
-code
-    //font-size: 90%
+        +media($tablet-small)
+            font-size: 14px
+
+    .output
+        color: $dark-gray-color
+        line-height: 1.1em
+
+//code
     padding: 2px 0px
     color: #c7254e
     background-color: #f9f2f4
@@ -90,6 +113,18 @@ code
     border-right: 4px solid #f9f2f4
     border-radius: 0px
     font-family: 'Monaco', Consolas,"Courier New", Menlo,Monaco,monospace
+
+code
+    background: none
+    border-radius: 0
+    border: none
+    font-family: Courier, "Courier New", monospace
+    font-size: 0.95em
+    margin: 0
+    padding: 0px
+    background-color: lighten($light-gray-color, 6%)
+    border-left: 5px solid lighten($light-gray-color, 6%)
+    border-right: 5px solid lighten($light-gray-color, 6%)
 
 .output
     //background-color: #f8f8f8
@@ -114,3 +149,115 @@ code
     b
         color: $primary-color
         font-weight: bold
+
+.out
+    color: shade($gray, 20%)
+    font-family: "Courier New", Courier, monospace
+    font-size: 13px
+    padding: 1em
+    max-width: 100%
+    overflow: auto
+    overflow-x: auto
+    margin: 20px auto
+    white-space: pre-wrap
+    overflow-wrap: break-word
+    word-break: break-all
+    word-wrap: break-word
+
+.contact
+    text-align: center
+    +media($tablet-small)
+        text-align: left
+
+    h1
+        text-align: left
+        margin-bottom: 5rem
+
+    &-left
+        font-size: 20px
+        opacity: 0.75
+        display: block
+        text-align: center
+        +media($tablet-small)
+            display: inline-block
+            text-align: left
+            padding: 0px 50px
+
+    &-right
+        font-size: 18px
+        display: block
+        text-align: center
+        +media($tablet-small)
+            display: inline-block
+            text-align: left
+            padding-left: 50px
+
+    .big-space
+        margin: 2rem 0rem 3rem
+
+.hrule
+    text-align: center
+    margin: 0 auto
+    border-top: 1px solid lighten($medium-gray-color, 20%)
+    width: 100%
+    position: relative
+
+    &:before
+        display: block
+        content: " "
+        width: 7px
+        height: 7px
+        border: $medium-gray-color 1px solid
+        position: absolute
+        top: -5px
+        left: 50%
+        margin-left: -5px
+        background: #FFF
+        box-shadow: #FFF 0 0 0 5px
+        border-radius: 3px
+
+.big-spacing
+    margin-top: $big-spacing
+    margin-bottom: $big-spacing
+
+    &-bottom
+        margin-bottom: $big-spacing
+
+    &-top
+        margin-top: $big-spacing
+
+.base-spacing
+    margin-top: $base-spacing
+    margin-bottom: $base-spacing
+
+    &-bottom
+        margin-bottom: $base-spacing
+
+    &-top
+        margin-top: $base-spacing
+
+.small-spacing
+    margin-top: $small-spacing
+    margin-bottom: $small-spacing
+
+    &-bottom
+        margin-bottom: $small-spacing
+
+    &-top
+        margin-top: $small-spacing
+
+.med-spacing
+    margin-top: $med-spacing
+    margin-bottom: $med-spacing
+
+.side-by-side
+    @extend %clearfix
+    max-width: 100%
+
+    .left-side
+        float: left
+        width: 50%
+
+    .right-side
+        float: right
+        width: 50%

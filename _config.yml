@@ -4,26 +4,52 @@ markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM
+  syntax_highlighter: rouge
   syntax_highlighter_opts:
-    default_lang: html
     css_class: 'highlight'
-    span:
-      line_numbers: false
-    block:
-      line_numbers: true
-      start_line: 1
-
-highlightStyle: hopscotch
-highlightLanguages: [ dos, vim, x86asm, shell, console ]
+    #span:
+      #line_numbers: false
+    #block:
+      #line_numbers: true
+      #start_line: 1
 
 plugins:
     - jekyll-paginate
     - jekyll-redirect-from
     - jekyll-octicons
+    - jemoji
+    - jekyll-seo-tag
+    - jekyll-archives
+    - jekyll-toc
+    - jekyll-email-protect
+    - jekyll/tagging
+    - jekyll-tagging-related_posts
+
 
 paginate: 5
 paginate_path: "/blog/page/:num/"
 comments: true
+
+excerpt_separator: "<!-- more -->"
+
+toc:
+  min_level: 1 # default: 1
+  max_level: 5 # default: 6
+
+#jekyll-archives:
+ # enabled:
+#      - tags
+#      - categories
+  #layout: 'archive'
+  #layouts:
+    #tag: tags
+    #category: category
+  #permalinks:
+    #tag: '/tag/:name'
+    #category: '/category/:name'
+
+tag_page_layout: tags
+tag_page_dir: tag
 
 source: source
 destination: _site
@@ -33,15 +59,18 @@ sass:
 
 # SEO settings
 title: Clarissa Podell
-description: "Clarissa Podell's personal website and blog"
-keywords: "Jekyll, theme, free, download, SEO, blog, web"
-url: https://c1arissa.github.io/
+description: "Clarissa Podell's Personal Site and Blog"
+keywords: "Jekyll, theme, free, download, SEO, blog, web, computer security"
+url: http://localhost:4000/testgitpages  #http://yourdomain.com
 baseurl: "/testgitpages"
 
-google_analytics: UA-52446115-1
+#google_analytics: UA-121634252-1
 repo: http://github.com/c1arissa/testgitpages
 #disqus_shortname: "nandothemes"
 #disqus_site_shortname: "nandothemes"
+
+tag_page: "/testgitpages/tags/"
+category_page: "/testgitpages/categories/"
 
 # Author settings
 author:
@@ -52,6 +81,7 @@ author:
   email: clarissapodell@gmail.com
   url: https://c1arissa.github.io/
   github: https://github.com/c1arissa
+  mobile: (631)-708-2725
   #twitter: https://twitter.com/umdevux
   #facebook: https://facebook.com/umdevux
   linkedin: https://linkedin.com/in/clarissapodell
