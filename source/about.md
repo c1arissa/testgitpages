@@ -30,6 +30,20 @@ You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://gi
 
 <a href="{{ '/images/Resume.pdf' | prepend: site.baseurl }}" class="button button-ghost" title="resume">Download my Résumé</a>
 
+{% comment %}
+Notable Features
+    Bundled as a “theme gem” for easier install/upgrading.
+    Compatible with GitHub Pages.
+    Support for Jekyll’s built-in Sass/SCSS preprocessor.
+    Nine different skins (color variations).
+    Several responsive layout options (single, archive index, search, splash, and paginated home page).
+    Optimized for search engines with support for Twitter Cards and Open Graph data
+    Optional header images, custom sidebars, table of contents, galleries, related posts, breadcrumb links, navigation lists, and more.
+    Commenting support (powered by Disqus, Facebook, Google+, Discourse, static-based via Staticman v1 and v2, and custom).
+    Google Analytics support.
+    UI localized text in English (default), Brazilian Portuguese (Português brasileiro), Chinese, Danish, Dutch, French (Français), German (Deutsch), Greek, Hungarian, Indonesian, Italian (Italiano), Japanese, Korean, Nepali (Nepalese), Polish, Russian, Slovak, Spanish (Español), Swedish, Turkish (Türkçe), and Vietnamese.
+{% endcomment %}
+
 ### About This Website
 This website was built locally on [Jekyll](http://jekyllrb.com/), an open source static site generator, and hosted by GitHub Pages.  I forked this theme from [end2end]() and used the Atom editor with GitHub integration / plugin on my desktop to customize the layout and add content.  Fonts are served through [Google Fonts](https://fonts.google.com/) and Icons through [Font Awesome](https://fontawesome.com) and [Octicons]().  This site is responsive and uses HTML and CSS written in Sass.  Favicon made by me and generated with [Real Favicon Generator](https://realfavicongenerator.net).  This website was built responsively using HTML5 and CSS in Sass.
 

@@ -6,6 +6,8 @@ header nav ul li .children li { display: block; width: 100%; text-align: left; f
 header nav ul li .children li a { width: 100%; }
 header nav ul li .fa-angle-down { position: relative; top: 3px; }
 header nav ul li ul li:first-child { padding-top: 5px; }
+.dropbtn { border: none; cursor: pointer; }
+.show {display: block;}
 
 @media all and (max-width: 768px) {
     header nav ul li:hover .children { display: block; }
@@ -42,8 +44,11 @@ header nav ul li ul li:first-child { padding-top: 5px; }
   <ul>
     <li><a href="{{ '/' | prepend: site.baseurl }}about" title="About">About</a></li>
 
-    <li class="sub-menu"><a href="{{ '/' | prepend: site.baseurl }}blog" title="Blog">Blog <i class="fas fa-angle-down"></i></a>
-    <ul class="children">
+
+    <!--<li class="sub-menu">-->
+    <li class="dropbtn" onclick="myFunction()">
+        <a href="{{ '/' | prepend: site.baseurl }}blog" title="Blog">Blog <i class="fas fa-angle-down"></i></a>
+    <ul id="myDropdown" class="children">
         <li><a href="{{ '/' | prepend: site.baseurl }}tags" title="tags"><span>-</span> Tags</a></li>
         <li><a href="{{ '/' | prepend: site.baseurl }}category" title="categories"><span>-</span> Categories</a></li>
     </ul>
@@ -95,7 +100,7 @@ $(this).children('.children').slideToggle();
 })
 });
 </script>
--->
+
 <script>
 $(document).ready(function(){
   // submenu
@@ -103,4 +108,22 @@ $(document).ready(function(){
   	$(this).children('.children').slideToggle();
   })
 });
+</script>
+-->
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+    var myDropdown = document.getElementById("myDropdown");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+  }
+}
 </script>

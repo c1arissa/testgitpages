@@ -62,15 +62,6 @@ layout: page
 </div>
 -->
 
-
-<!--<div class="tags-expo">
-
-<h2><i class="fas fa-cloud"></i> TAG CLOUD</h2>
-
-    <div class="tags-expo-list">
-        {{ site | tag_cloud }}
-    </div>
--->
 <div class="tags-expo">
   <div class="tags-expo-list">
     {% for tag in site.tags %}
@@ -94,7 +85,7 @@ layout: page
       </a>
       {% endfor %}
     </ul>
-
+    <div class="back-to-top"><a href="{{ site.baseurl }}/tags/#tags">BACK TO TOP <i class="fas fa-long-arrow-alt-up"></i></a></div>
     <div class="breaker"></div>
     {% endfor %}
   </div>

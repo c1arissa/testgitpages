@@ -4,6 +4,9 @@ markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM
+  auto_ids: true
+  footnote_nr: 1
+  toc_levels: 1, 2, 3, 4, 5
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     css_class: 'highlight'
@@ -36,17 +39,23 @@ toc:
   min_level: 1 # default: 1
   max_level: 5 # default: 6
 
-#jekyll-archives:
- # enabled:
-#      - tags
-#      - categories
-  #layout: 'archive'
-  #layouts:
-    #tag: tags
-    #category: category
-  #permalinks:
-    #tag: '/tag/:name'
-    #category: '/category/:name'
+category_archive:
+  type: jekyll-archives
+  path: /categories/
+tag_archive:
+  type: jekyll-archives
+  path: /tags/
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
+
 
 tag_page_layout: tags
 tag_page_dir: tag

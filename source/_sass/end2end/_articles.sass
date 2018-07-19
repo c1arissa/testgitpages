@@ -430,21 +430,34 @@
 
 #markdown-toc::before
     content: "Table of Contents"
-    font-size: 3rem
+    font-size: 2rem
     font-weight: bold
+    margin-left: -8px
 
-#markdown-toc ul
-    /*list-style: decimal;*/
-    list-style: none
+//#markdown-toc ul
+    list-style: decimal
 
 #markdown-toc
-    border: 1px solid #aaa
+    border: 1px solid #ccc
     padding: 1.5em
     list-style: decimal
     display: inline-block
 
+    ul > li
+        list-style: disc
+
+    ul > li > ul > li
+        list-style: circle
+
+    ul > li > ul > li > ul > li
+        list-style: square
+
+    ul > li > ul > li > ul > li > ul > li
+        list-style: disc
+
+
 .section-nav::before
-    content: "Contents"
+    content: "Index"
     margin-left: -3px
     font-size: 1.5rem
     font-weight: bold
@@ -566,3 +579,19 @@ li.toc-h5
 
 .author-info *:first-child
     margin-top: 0
+
+.back-to-top
+    float: right
+    color: $primary-color
+    font-weight: 900
+    text-transform: uppercase
+    font-size: .8rem
+
+    a
+        color: $medium-gray-color
+        &:hover
+            color: shade($medium-gray-color, 40%)
+
+    i
+        margin-left: 0.3em
+        vertical-align: middle

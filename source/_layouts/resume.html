@@ -18,11 +18,11 @@ layout: pages
 <div class="header-right">
 
 <ul class="contact-list">
-<li><span class="icon phone"></span> 631-708-2725</li>
-<li><span class="icon email"></span> <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-<li><span class="icon linkedin"></span> <a href="{{ site.author.linkedin }}">clarissapodell</a></li>
-<li><span class="icon web"></span> <a href="https://clarissapodell.com">clarissapodell</a></li>
-<li><span class="icon address"></span> Valley Stream, NY 11580</li>
+<li><i class="icon icon-phone"></i> 631-708-2725</li>
+<li><i class="icon icon-mail4"></i> <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+<li><i class="icon icon-linkedin2"></i> <a href="{{ site.author.linkedin }}">clarissapodell</a></li>
+<li><i class="icon icon-link"></i> <a href="https://clarissapodell.com">clarissapodell.com</a></li>
+<li><i class="icon icon-location2"></i> Valley Stream, NY 11580</li>
 </ul>
 
 </div>
@@ -32,7 +32,6 @@ layout: pages
 
 <!------ CONTACT
 <h2 class="section-title"><span><i class="fas fa-envelope"></i>Contact</span></h2>
-
 <ul class="contact-list">
 <li><i class="fas fa-mobile-alt fa-fw fa-lg"></i> 631-708-2725</li>
 <li><i class="fas fa-at fa-fw fa-lg"></i> <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
@@ -41,10 +40,12 @@ layout: pages
 <li><i class="fas fa-location-arrow fa-fw fa-lg"></i> Valley Stream, NY 11580</li>
 </ul> ------>
 
-<div class="hrule big-spacing"></div>
+<div class="hrule base-spacing"></div>
 
-<a class="button button-ghost" href="{{ '/' | prepend: site.baseurl }}contact" title="Contact">Contact Me</a>
 <a class="button button-ghost" href="{{ '/images/Resume.pdf' | prepend: site.baseurl }}" title="resume">Download my Résumé</a>
+
+
+<!-- <a class="button button-ghost" href="{{ '/' | prepend: site.baseurl }}contact" title="Contact">Contact Me</a> -->
 
 <!------ SUMMARY------>
 <h2 class="section-title"><span><i class="fas fa-user"></i>SUMMARY</span></h2>
@@ -61,21 +62,45 @@ Seeking career opportunity to collaborate with like-minded individuals.
 <!------ SCHOOL 1 ------>
 <h3 class="title">Bachelor of Science in Computer Science and Information Security</h3>
 
-<span class="subtitle">John Jay College of Criminal Justice, City University of New York (CUNY), New York, NY <span class="date">Jan 2016 &mdash; May 2018</span></span>
+<span class="subtitle">CUNY John Jay College of Criminal Justice &mdash; New York, NY<span class="date"><i class="far fa-calendar-alt"></i>Jan 2016&ndash;May 2018</span></span>
 <ul>
     <li>GPA: 4.0 / 4.0</li>
+</ul>
+
+<span class="subsection">Security Courses</span><br>
+<ul class="courses">
+    <li>Capstone in Cybersecurity and Digital Forensics I & II,
+    Faculty Mentored Research in Bitcoin and Blockchain,
+    Computer Security and Forensics,
+    Network Security and Forensics,
+    Cryptography and Cryptanalysis
+</li>
+</ul>
+
+<span class="subsection">Computer Science Courses</span><br>
+<ul class="courses">
+    <li>Operating Systems,
+        Computer Architecture,
+        Computer Networking,
+        Object-Oriented Programming in C++,
+        Data Structures,
+        Algorithms,
+        Programming Languages,
+        Calculus I & II</li>
 </ul>
 
 <!------ SCHOOL 2 ------>
 <h3 class="title">Bachelor of Science in Fashion Merchandising Management</h3>
 
-<span class="subtitle">Fashion Institute of Technology, State University of New York (SUNY), New York, NY <span class="date">Aug 2009 &mdash; May 2013</span></span>
-<p>GPA: 3.48 / 4.0</p>
+<span class="subtitle">SUNY Fashion Institute of Technology &mdash; New York, NY<span class="date"><i class="far fa-calendar-alt"></i>Aug 2009&ndash;May 2013</span></span>
+<ul>
+    <li>GPA: 3.48 / 4.0</li>
+</ul>
 
 <!------ SKILLS ------>
 <h2 class="section-title"><span><i class="fas fa-wrench"></i>SKILLS</span></h2>
 
-<h3 class="category">Languages</h3>
+<h3 class="subsection">Languages</h3>
 <div class="skills">
 <span class="skills-left">Programming/Scripting <small>(Strong)</small></span>
 <span class="skills-right"> Python, C, C++, LaTeX</span>
@@ -88,19 +113,19 @@ Seeking career opportunity to collaborate with like-minded individuals.
 
 <div class="skills">
 <span class="skills-left">Web</span>
-<span class="skills-right">HTML, CSS, SASS, Jekyll</span>
+<span class="skills-right">HTML5, CSS3, SASS, Jekyll</span>
 </div>
 
-<h3 class="category">Systems</h3>
+<h3 class="subsection">Systems</h3>
 <div class="skills">
 <span class="skills-left">Operating Systems</span>
 <span class="skills-right"> Windows and Linux (Debian, Ubuntu). Virtualization: Oracle VirtualBox, Deter Labs</span>
 </div>
 
-<h3 class="category">Software</h3>
+<h3 class="subsection">Software</h3>
 <div class="skills">
-<span class="skills-left">Debugging and Reversing</span>
-<span class="skills-right">GDB, WinDbg, Immunity Debugger, OllyDbg, IDA Pro (Free)</span>
+<span class="skills-left">Debugging/Reversing</span>
+<span class="skills-right">GDB, WinDbg, Immunity Debugger, OllyDbg, IDA Pro</span>
 </div>
 
 <div class="skills">
@@ -127,7 +152,7 @@ Seeking career opportunity to collaborate with like-minded individuals.
 <h2 class="section-title"><span><i class="fas fa-code"></i>PROJECTS</span></h2>
 
 <h3 class="title">Bypassing Microsoft's Control Flow Guard (CFG)</h3>
-<span class="subtitle">Capstone in Cybersecurity | John Jay College of Criminal Justice <span class="date">Sep 2017 &#45; Present</span></span>
+<span class="subtitle">Capstone in Cybersecurity &mdash; John Jay College of Criminal Justice <span class="date"><i class="far fa-calendar-alt"></i>Sep 2017&ndash;Present</span></span>
 <ul>
     <li>Team lead of 4 person group in a year-long senior research project</li>
     <li>Research vulnerabilities and design limitations in CFG that can be leveraged to circumvent security measures and demonstrate several exploits
@@ -136,7 +161,7 @@ Seeking career opportunity to collaborate with like-minded individuals.
 </ul>
 
 <h3 class="title">Electronic Health Record DApp</h3>
-<span class="subtitle">Faculty Mentored Research in Bitcoin & Blockchain | John Jay College of Criminal Justice <span class="date">Jan 2018 &#45; May 2018</span></span>
+<span class="subtitle">Faculty Mentored Research in Bitcoin & Blockchain &mdash; John Jay College of Criminal Justice <span class="date"><i class="far fa-calendar-alt"></i>Jan 2018&ndash;May 2018</span></span>
 <ul>
     <li>Research funded by a National Science Foundation grant to develop a infrastructure for distributed health record storage with access
         managed by a public blockchain.</li>
@@ -144,7 +169,7 @@ Seeking career opportunity to collaborate with like-minded individuals.
 </ul>
 
 <h3 class="title">Personal Blog and Website</h3>
-<span class="subtitle">Self-employed @ <a href="https://clarissapodell.com">clarissapodell.com</a> <span class="date">January 2018 &#45; Present</span></span>
+<span class="subtitle">Self-employed @ <a href="https://clarissapodell.com">clarissapodell.com</a> <span class="date"><i class="far fa-calendar-alt"></i>Jan 2018&ndash;Present</span></span>
 <ul>
     <li>Built locally with Jekyll and hosted by GitHub pages.</li>
     <li>Written in HTML and CSS in SASS.</li>
@@ -155,7 +180,7 @@ Seeking career opportunity to collaborate with like-minded individuals.
 <h2 class="section-title"><span><i class="fas fa-flask"></i>Lab Work</span></h2>
 
 <h3 class="title">Capstone in Cybersecurity and Digital Forensics (CSCI-400)</h3>
-<span class="subtitle">John Jay College of Criminal Justice, New York, NY <span class="date">Fall 2017</span></span>
+<span class="subtitle">John Jay College of Criminal Justice, New York, NY <span class="date"><i class="far fa-calendar-alt"></i>Fall 2017</span></span>
 
 <dl>
  <dt>Steganography Lab</dt>
@@ -165,30 +190,103 @@ Seeking career opportunity to collaborate with like-minded individuals.
  <dd>Factored weak 1024-bit RSA moduli by finding a common divisor and reconstructed the private key to decrypt SSL/TLS traffic.  <a href="{{ site.baseurl }}/blog/2018/lab2">Click to read more</a>.</dd>
  <dd>Cracked password hashes with dictionary attacks using Hashcat & John the Ripper</dd>
  <dd>Decrypted SSL traffic with MiTM attacks on Ettercap.</dd>
+
+ <dt>Intrusion Detection Systems Lab</dt>
+ <dd>Configured Snort and OSSEC on a small DETER testbed network and developed signatures & rules.</dd>
+ <dd>Evaluated IDS by creating forged packet streams with Scapy to trigger alerts.</dd>
+
+ <dt>Denial of Service Lab</dt>
+ <dd>Deployed a SYN flood attack between two testbed nodes and analyzed tcpdump attack traffic to calculate TCP connection durations.</dd>
+
+ <dt>Malware Lab</dt>
+ <dd>Wrote a proof-of-concept Command & Control botnet (master and worker) in Python.</dd>
+ <dd>Commands include download a website, send spam, and send files from the botmaster's host of choice.</dd>
+
+ <dt>Exploits Lab</dt>
+ <dd>Wrote scripts to exploit a buffer overflow in web server software and a remote directory traversal vulnerability in perl cgi code.</dd>
+ <dd>Created patches to fix the bugs.</dd>
+
+ <dt>OS-Specific security Lab</dt>
+ <dd>Wrote an exploit in C to bypass Ubuntu's address space layout randomization protection on a binary with a buffer overflow vulnerability.</dd>
 </dl>
-
-\item[\lab{Intrusion Detection Systems Lab:}] Configured Snort and OSSEC on a small DETER testbed network and developed signatures \& rules.  Evaluated IDS by creating forged packet streams with Scapy to trigger alerts.\\[1pt]
-\item[\lab{Denial of Service Lab:}] Deployed a SYN flood attack between two testbed nodes \& analyzed tcpdump attack traffic to calculate TCP connection durations.\\[1pt]
-\item[\lab{Malware Lab:}] Wrote a proof-of-concept Command \& Control botnet (master and worker) in Python.  Commands: download website, send spam, \& send files from host of choice.\\[1pt]
-\item[\lab{Exploits Lab:}] Wrote scripts to exploit a buffer overflow in web server software and a remote directory traversal vulnerability in perl cgi code.  Created patches to fix the bugs.\\[1pt]
-\item[\lab{OS-Specific security Lab:}] Wrote an exploit in C to bypass Ubuntu's address space layout randomization protection on a binary with a buffer overflow vulnerability.
-
-
 
 <!------ AWARDS ------>
 <h2 class="section-title"><span><i class="fas fa-trophy"></i>AWARDS</span></h2>
 
 <h3 class="title">Ruth S. Lefkowitz Mathematics Prize</h3>
-<span class="subtitle">John Jay College of Criminal Justice <span class="date">May 2018</span></span>
+<span class="subtitle">John Jay College of Criminal Justice <span class="date"><i class="far fa-calendar-alt"></i>May 2018</span></span>
 <ul>
     <li>Award presented to one graduating senior for outstanding academic performance in the Computer Science & Information Security major.</li>
 </ul>
 
 <h3 class="title">Cornell University's Women in Technology & Entrepreneurship in New York (WiTNY) Scholarship</h3>
-<span class="subtitle">John Jay College of Criminal Justice <span class="date">2017 - 2018</span></span>
+<span class="subtitle">John Jay College of Criminal Justice <span class="date"><i class="far fa-calendar-alt"></i>2017&ndash;2018</span></span>
 <ul>
     <li>Scholarship for promising female students in technology-related disciplines.</li>
 </ul>
 
+<!------ EXPERIENCE ------>
+<h2 class="section-title"><span><i class="fas fa-briefcase"></i>Work Experience</span></h2>
+
+<h3 class="title">Head Receptionist / Office Administrator</h3>
+<span class="subtitle">Williston Park Animal Hospital &mdash; Williston Park, NY<span class="date"><i class="far fa-calendar-alt"></i>Jun 2014&ndash;Present</span></span>
+<p>
+    Grows the practice through marketing and strategic partnerships with vendors that support the doctor’s holistic specialty.
+    Implements clinic policies and procedures related to account receivables, billing, collections, and inventory controls.
+    Manage & direct front-office staff through hiring, interviewing, and training.
+</p>
+
+
+<h3 class="title">Assistant Wholesale Planner</h3>
+<span class="subtitle">alice + olivia &mdash; New York, NY<span class="date"><i class="far fa-calendar-alt"></i>Aug 2013&ndash;May 2014</span></span>
+<p>
+    Worked with the Director of Planning to develop pre-season plans aligned with corporate financial targets.
+    Presented revised sales projections based on current and historical data.
+    Created Excel spreadsheet templates to analyze account sales, stock and profitability across business segments.
+</p>
+
+<h3 class="title">Wholesale Intern</h3>
+<span class="subtitle">Alexander Wang, Inc. &mdash; New York, NY<span class="date"><i class="far fa-calendar-alt"></i>Jan 2013&ndash;Jun 2013</span></span>
+<p>
+    Researched and identified opportunities to expand wholesale business in Asia and Australia.
+    Coordinated the execution of Fall `13 market week & supervised a group of interns and temps.
+</p>
+
+<h3 class="title">Sales</h3>
+<span class="subtitle">Scoop NYC &mdash; New York, NY<span class="date"><i class="far fa-calendar-alt"></i>Aug 2011&ndash;Aug 2013</span></span>
+<p>
+    Top sales performer, achieved personal monthly quotas averaging $20,000 in sales per week.
+    Established loyal network of clients through maintenance of a clientèle database.
+</p>
+
+<h3 class="title">Retail Specialist</h3>
+<span class="subtitle">The Kooples &mdash; NY Metro Area<span class="date"><i class="far fa-calendar-alt"></i>Aug 2012&ndash;Apr 2013</span></span>
+<p>
+    Launched the company's first four stores in the United States.
+    Oversaw daily operations, established brand recognition by customers & communicated daily performance to Paris headquarters.
+</p>
+
+<h3 class="title">Fashion Office Intern</h3>
+<span class="subtitle">Bloomingdale's &mdash; New York, NY<span class="date"><i class="far fa-calendar-alt"></i>Jun 2011&ndash;Aug 2011</span></span>
+<p>
+    First intern in history to style seventeen mannequins for the "Brights and Cropped" themed story which appeared in the 3rd Ave Flagship windows.
+</p>
+
+
+<h3 class="title">Accessory Editor Intern</h3>
+<span class="subtitle">Condé Nast's Glamour Magazine &mdash; New York, NY<span class="date"><i class="far fa-calendar-alt"></i>Jan 2011&ndash;Jun 2011</span></span>
+<p>
+    Improved the system of trafficking designer samples to and from agencies and showrooms by updating and organizing electronic contact sheets.
+</p>
+
+<!------ HOBBIES ------>
+<h2 class="section-title"><span><i class="fas fa-heart"></i>Hobbies</span></h2>
+
+<ul>
+    <li>Wargames - OverTheWire, pwnable.kr, Root-Me, SmashTheStack, HackThisSite</li>
+    <li>Krav Maga Yellow Belt</li>
+</ul>
+
+<!------ END ------>
 </section>
 </article>

@@ -5,6 +5,9 @@
     ul li
         line-height: 1.4rem
 
+    dt
+        font-weight: 900
+
     p
         margin-bottom: 2rem
 
@@ -19,14 +22,20 @@
 
     .contact-list
         list-style: none
+        padding: 0px
+        font-size: 1.2rem
 
-        li i
-            padding-left: 1rem
-            padding-right: 1rem
-            margin-right: 1.5rem
-            font-size: 1.2rem
+        +media($tablet-small)
+            font-size: 1rem
+
+        +media($tablet)
+            font-size: 1.1rem
+
+        //li i
+            margin-right: 1rem
+            font-size: 1.1rem
             text-align: center
-            opacity: 0.9
+
 
     .date
         @extend %clearfix
@@ -44,28 +53,31 @@
             text-align: right
             margin: 0
 
-    .date::before
+        i
+            display: none
+            +media($tablet-small)
+                margin-right: 0.3rem
+                display: inline-block
+
+    //.date::before
         content: ""
-        //font-size: 90%
-        font-family: $base-font-family
         +media($tablet-small)
-            font-family: "Font Awesome 5 Free"
-            content: "\f133"
+            font-family: 'end2end' !important
+            content: $icon-calendar
             vertical-align: middle
-            margin-right: 0.5em
+            margin-right: 0.3em
 
     .title
         font-size: 18px
-        font-weight: 900
+        font-weight: 700
         //letter-spacing: 1px
         color: $base-font-color
         margin: 1.5em 0em 0em
-        font-family: $base-font-family
 
     .subtitle
-        color: $gray
-        font-style: italic
-        font-size: 90%
+        color: $medium-gray-color
+        //font-style: italic
+        //font-weight: 300
 
     .skills
         @extend %clearfix
@@ -89,6 +101,7 @@
 
     .name
         font-size: 3.5rem
+        font-weight: 900
         font-family: 'Raleway', sans-serif
         color: $primary-color
         margin-top: 0px
@@ -111,6 +124,15 @@
         font-weight: 300
         font-style: italic
         font-family: $heading-font-family
+
+    .subsection
+        color: $primary-color
+        font-size: 1.1rem
+        font-weight: 900
+        font-family: $base-font-family
+
+    .courses
+        font-weight: 300
 
     .header
         @extend %clearfix
@@ -135,8 +157,7 @@
         list-style: none
         padding-left: 0px
 
-
-    .icon::before
+    .fa-icon::before
         display: inline-block
         font-style: normal
         font-variant: normal
@@ -148,54 +169,64 @@
         font-weight: 900
         content: "\f007"
 
-    .phone::before
-        content: "Mobile:"
-        font-weight: 900
-        margin-right: 0.5em
-        font-family: $base-font-family
-        +media($tablet-small)
-            font-family: "Font Awesome 5 Free"
-            content: "\f3cd"
-            vertical-align: middle
+    .icon-phone
+        &:before
+            content: "Mobile:"
+            font-weight: 900
+            font-family: $base-font-family
+            text-align: right
+            margin-right: 1rem
+            +media($tablet-small)
+                font-weight: 400
+                font-family: 'end2end' !important
+                content: $icon-phone
 
-    .email::before
+    .icon-mail4::before
         content: "E-mail:"
         font-weight: 900
-        margin-right: 0.5em
         font-family: $base-font-family
+        text-align: right
+        margin-right: 1rem
         +media($tablet-small)
-            font-family: "Font Awesome 5 Free"
-            content: "\f1fa"
+            font-weight: 400
+            font-family: 'end2end' !important
+            content: $icon-mail4
             vertical-align: middle
 
-    .linkedin::before
+    .icon-linkedin2::before
         content: "LinkedIn:"
         font-weight: 900
-        margin-right: 0.5em
         font-family: $base-font-family
+        text-align: right
+        margin-right: 1rem
         +media($tablet-small)
-            font-family: "Font Awesome 5 Free"
-            content: "\f0e1"
+            font-weight: 400
+            font-family: 'end2end' !important
+            content: $icon-linkedin2
             vertical-align: middle
 
-    .address::before
+    .icon-location2::before
         content: "Address:"
         font-weight: 900
-        margin-right: 0.5em
         font-family: $base-font-family
+        text-align: right
+        margin-right: 1rem
         +media($tablet-small)
-            font-family: "Font Awesome 5 Free"
-            content: "\f276"
+            font-weight: 400
+            font-family: 'end2end' !important
+            content: $icon-location2
             vertical-align: middle
 
-    .web::before
+    .icon-link::before
         content: "Website:"
         font-weight: 900
-        margin-right: 0.5em
         font-family: $base-font-family
+        text-align: right
+        margin-right: 1rem
         +media($tablet-small)
-            font-family: "Font Awesome 5 Free"
-            content: "\f57d"
+            font-weight: 400
+            font-family: 'end2end' !important
+            content: $icon-link
             vertical-align: middle
 
     /* HEADING WITH ICON */
