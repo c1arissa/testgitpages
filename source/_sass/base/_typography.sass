@@ -2,7 +2,6 @@
 
 html
   font-size: $unit-font-size
-  //font-size: 62.5%
 
 body
   color: $base-font-color
@@ -67,7 +66,6 @@ h6
 p
   font-weight: $font-weight-normal
   margin: 0 0 1.3em
-  //$small-spacing
 
   &:last-child
     margin-bottom: 0
@@ -80,15 +78,18 @@ small
   opacity: .75
 
 a
-  //color: $action-color
-  color: $light-purple
+  color: $action-color
   text-decoration: none
+  -moz-transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease
+  -webkit-transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease
+  -ms-transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease
+  transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease
+  //text-decoration: underline
 
   &:active,
   &:focus,
   &:hover
-    //color: shade($action-color, 35%)
-    color: shade($light-purple, 35%)
+    color: shade($action-color, 50%)
 
 hr
   border-bottom: $base-border
@@ -130,7 +131,12 @@ picture
     display: block
     margin: 30px auto
     text-align: center
-    //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+
+    &-sm
+        max-width: 70%
+
+    &-med
+        max-width: 80%
 
 .normal
     margin: 0px
@@ -142,14 +148,8 @@ picture
     height: auto
     background-color: white
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
-    margin-bottom: 25px
+    margin: 30px auto
     display: block
-    margin-left: auto
-    margin-right: auto
-
-.img-container
-    text-align: center
-    padding: 10px 20px
 
 //code
   background: none

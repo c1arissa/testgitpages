@@ -2,162 +2,66 @@
 layout: page
 ---
 
-<!-- <section class="list">
-    <h1 class="title">Tags</h1>
+<style>
+.ui.segment {
+    background: #fff;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.post-title {
+    color: #9b4dca;
+    text-transform: uppercase;
+    margin-bottom: 0rem;
+    font-weight: 300;
+}
+.post-header {
+    margin-bottom: 0.5rem;
+}
+</style>
 
-    {% assign tags_list = site.tags %}
+{% include up_button.html %}
 
-    {% if tags_list.first[0] == null %}
-        {% for tag in tags_list %}
-            <a class="item" href="#{{ tag | slugify }}">{{ tag }}</a>
-        {% endfor %}
-    {% else %}
-        {% for tag in tags_list %}
-            <a class="item" href="#{{ tag[0] | slugify }}">{{ tag[0] }}</a>
-        {% endfor %}
-    {% endif %}
-
-    {% assign tags_list = nil %}
-</section>
-<hr>
-<section class="tag-list">
-    {% for tag in site.tags  %}
-    <h2 class="title" id="{{ tag[0] | slugify }}">#{{ tag[0] }}</h2>
-
-    <ul class="list">
-        {% assign pages_list = tag[1] %}
-        {% for post in pages_list reversed %}
-            {% if post.title != null %}
-                {% if group == null or group == post.group %}
-                    <li class="item">
-                        <a class="url" href="{{ site.url }}{{ post.url }}">
-                            <aside class="date"><time datetime="{{ post.date | date:"%d-%m-%Y" }}">{{ post.date | date: "%b %d %Y" }}</time></aside>
-                            <h3 class="title">{{ post.title }}</h3>
-                        </a>
-                    </li>
-                {% endif %}
-            {% endif %}
-        {% endfor %}
-        {% assign pages_list = nil %}
-        {% assign group = nil %}
-    </ul>
-
-    <div class="breaker"></div>
-    {% endfor %}
-</section>
-
+<!--
 <div class="tags-expo">
   <h3>Tag Cloud</h3>
   <div class="tags-expo-list">
   {{ site | tag_cloud }}
 </div>
 </div>
-
-<div class="tags-expo-list">
-    {% assign cloud = site | tag_cloud %}
-    {% for tag in cloud %}
-<span>{{ tag }}</span>
-<span>{{ site | tag_cloud }}</span>
-{% endfor %}
-</div>
 -->
 
 <div class="tags-expo">
+{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+<!-- site_tags: {{ site_tags }} -->
+{% assign tag_words = site_tags | split:',' | sort %}
+<!-- tag_words: {{ tag_words }} -->
+
   <div class="tags-expo-list">
-    {% for tag in site.tags %}
-    <a href="#{{ tag[0] | slugify }}" class="post-tags">{{ tag[0] }}</a>
+      <div class="ui purple padded left aligned raised segment">
+      {% for tag in tag_words %}
+      <a href="#{{ tag | cgi_escape }}" class="post-tags">
+        <span>{{ tag }} <span class="count">{{ site.tags[tag] | size }}</span>
+        </span>
+      </a>
     {% endfor %}
-    <aside class="post-date"><time datetime="{{ post.date | date:"%d-%m-%Y" }}">{{ post.date | date: "%b %d %Y" }}</time></aside>
+</div>
+    <aside class="post-date-small"><time datetime="{{ post.date | date:"%d-%m-%Y" }}">{{ post.date | date: "%b %d %Y" }}</time></aside>
 </div>
 
 <div class="hrule base-spacing"></div>
 
   <div class="tags-expo-section">
-    {% for tag in site.tags %}
-    <h2 id="{{ tag[0] | slugify }}"><i class="fas fa-hashtag"></i>{{ tag[0] }}</h2>
-    <ul class="tags-expo-posts">
-      {% for post in tag[1] %}
-        <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
-      <li>
-        {{ post.title }}
-        <small class="post-date">{{ post.date | date_to_string }}</small>
-      </li>
-      </a>
-      {% endfor %}
-    </ul>
-    <div class="back-to-top"><a href="{{ site.baseurl }}/tags/#tags">BACK TO TOP <i class="fas fa-long-arrow-alt-up"></i></a></div>
-    <div class="breaker"></div>
-    {% endfor %}
+      {% for item in (0..site.tags.size) %}{% unless forloop.last %}
+        {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
+        <h2 id="{{ this_word | cgi_escape }}"><i class="fas fa-hashtag"></i>{{ this_word }}</h2>
+        <ul class="tags-expo-posts">
+            {% for post in site.tags[this_word] %}{% if post.title != null %}
+            <a class="post-title-url" href="{{ site.baseurl }}{{ post.url }}">
+                <li>{{ post.title }} <small class="post-date-small">{{ post.date | date_to_string }}</small></li>
+            </a>
+            {% endif %}{% endfor %}
+          </ul>
+          <div class="breaker"></div>
+          {% endunless %}{% endfor %}
   </div>
 </div>
-
-<!-- <section class="post-list">
-{% if page.tag %}
-
-<article class="post">
-<h1 class="tag-title"><i class="fas fa-hashtag"></i> {{ page.tag }}</h1>
-
-
-    {% if site.tags[page.tag] %}
-      {% for post in site.tags[page.tag] %}
-        <div class="tag-entry">
-        <header class="post-header-list">
-
-          <p class="post-meta-list">
-              <time>{{ post.date | date: "%b %-d, %Y" }}</time>
-          </p>
-
-          <h3 class="post-title-list">
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h3>
-
-        </header>
-        <p><a href="{{ post.url | prepend: site.baseurl }}" title="Permalink to: {{ post.title }}">{{ post.content | strip_html | truncatewords: 30 }} <span class="read-more">[read more]</span></a></p>
-    </div>
-
-    <hr class="tag-line">
-
-    {% endfor %}
-  {% endif %}
-
-  {% include pagination.html %}
-
-
-<!-- <ul class="post-list">
-{% if site.tags[page.tag] %}
-  {% for post in site.tags[page.tag] %}
-    <li style="margin-bottom: 1.5rem;">
-      {% assign date_format = "%b %-d, %Y" | default: "%b %-d, %Y" %}
-      <span class="post-meta-list">{{ post.date | date: "%b %-d, %Y" }}</span>
-      <h2 class="post-title-list">
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </h2>
-      <h2>
-        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-    </h2> <p>{{ post.content | strip_html | truncatewords:25 }}</p>
-          <p><a href="{{ post.url | prepend: site.baseurl }}" title="Permalink to: {{ post.title }}">{{ post.content | strip_html | truncatewords: 25 }}
-              <span class="read-more">[read more]</span></a>
-          </p>
-    </li>
-  {% endfor %}
-{% endif %}
-</ul>
-{% endif %}
-
-
-{% if site.tags != '' %}
-<h3> Tags</h3>
-
-<!-- <div class="tags">
-     {% octicon tag %}
-    <i class="fas fa-tags"></i>
-  {% for tag_obj in site.tags %}
-    {% assign tag = tag_obj | first %}
-    {% assign count = site.tags[tag].size %}
-    <a href="{{site.baseurl}}/tag/{{ tag }}">
-      <span class="tag">{{ tag }}{% if count != 1 %}<span class="tag-count">({{ count }})</span>{% endif %}</span></a>
-  {% endfor %}
-{% endif %}
-
-</article>
-</section>-->

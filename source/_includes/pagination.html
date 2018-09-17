@@ -1,4 +1,35 @@
+<!-- Pagination links -->
 {% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% assign url = site.baseurl | append: "/blog/" %}
+      {% if paginator.previous_page %}
+          {% if paginator.previous_page > 1 %}
+              {% assign prev = 'page/' | append: paginator.previous_page %}
+          {% endif %}
+       <a class="page-item" href="{{ url | append: prev }}" title="Articles new"><i class="fas fa-arrow-left"></i></a>
+    {% else %}
+       <span class="page-item disabled-page"><i class="fas fa-arrow-left"></i></span>
+    {% endif %}
+
+{% for page in (1..paginator.total_pages) %}
+  {% if page == paginator.page %}
+    <span class="page-item">{{ page }}</span>
+  {% elsif page == 1 %}
+    <a href="{{ site.baseurl }}/blog/" class="page-item">{{ page }}</a>
+  {% else %}
+    <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="page-item">{{ page }}</a>
+  {% endif %}
+{% endfor %}
+
+{% if paginator.next_page %}
+  <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" title="Articles old" class="page-item"><i class="fas fa-arrow-right"></i></a>
+{% else %}
+  <span class="page-item disabled-page"><i class="fas fa-arrow-right"></i></span>
+{% endif %}
+</div>
+{% endif %}
+
+<!-- {% if paginator.total_pages > 1 %}
 <div class="pagination">
   {% assign url = site.baseurl | append: "/blog/" %}
   <ul>
@@ -6,13 +37,13 @@
       {% if paginator.previous_page > 1 %}
         {% assign prev = 'page/' | append: paginator.previous_page %}
       {% endif %}
-    <!--<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>-->
-    <li><a class="prev button button-ghost" href="{{ url | append: prev }}" title="Articles new"><i class="fas fa-arrow-left"></i></a></li>
+    <!--<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a> --
+     <li><a class="prev button button-ghost" href="{{ url | append: prev }}" title="Articles new"><i class="fas fa-arrow-left"></i> Prev</a></li>
   {% else %}
-    <li><a class="button button-ghost disabled"><i class="fas fa-arrow-left"></i></a></li>
-    <!--<span>&laquo; Prev</span>-->
+     <li><a class="button button-ghost disabled"><i class="fas fa-arrow-left"></i> Prev</a></li>
   {% endif %}
 
+<div class="responsive-pagination">
   {% for page in (1..paginator.total_pages) %}
     {% if page == paginator.page %}
       <li><span class="disabled-page current">{{ page }}</span></li>
@@ -22,12 +53,15 @@
       <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
     {% endif %}
   {% endfor %}
+</div>
 
   {% if paginator.next_page %}
-    <li><a class="next button button-ghost" href="{{ url | append: 'page/' | append: paginator.next_page }}" title="Articles old"><i class="fas fa-arrow-alt-circle-right"></i></a></li>
+      <li><a class="next button button-ghost" href="{{ url | append: 'page/' | append: paginator.next_page }}" title="Articles old">
+            Next <i class="fas fa-arrow-right"></i></a></li>
   {% else %}
-    <li><a class="button button-ghost disabled"><i class="fas fa-arrow-right"></i></a></li>
+      <li><a class="button button-ghost disabled">Next <i class="fas fa-arrow-right"></i></a></li>
   {% endif %}
 </ul>
 </div>
 {% endif %}
+-->

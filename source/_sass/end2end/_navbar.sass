@@ -65,7 +65,7 @@
 
     ul
       padding: 0
-      //margin: 0
+      margin: 0
 
     &, li, a
       display: inline-block
@@ -75,7 +75,6 @@
       color: inherit
       font-size: inherit
 
-
       &:before,
       &:after
         background-color: $light-gray-color
@@ -83,7 +82,12 @@
       &:hover, &:focus
         color: inherit
 
+.arrow::before
+  +triangle("down", 1rem, $primary-color)
+  content: ''
+
 .nav-icons
+  padding-top: 1em
   display: inline-block
   vertical-align: middle
   text-align: center
@@ -116,13 +120,17 @@
   margin: 0
   +position(relative, $base-spacing 0 null null)
   z-index: 100
+  color: white
+  text-align: center
   @extend %button
 
-  .icon-menu
+  .fa-bars
     display: block
+    color: white
 
-  .icon-cross
+  .fa-times
     display: none
+    color: white
 
   +media($tablet-small)
     display: none
@@ -139,7 +147,8 @@
       color: #fff
 
     ~ .toggle-navbar-button
-      .icon-menu
+        color: white
+      .fa-bars
         display: none
-      .icon-cross
+      .fa-times
         display: block

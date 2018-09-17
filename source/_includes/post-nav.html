@@ -2,9 +2,8 @@
   <div class="left-nav">
    {% if page.previous.url %}
    <h4>PREVIOUS POST</h4>
-   <span><a class="nav-links" href="{{ site.baseurl }}{{ page.previous.url }}" title="Articles new">
-         <!--<i class="fas fa-long-arrow-alt-left prev"></i> -->
-         ← {{ page.previous.title }}</a></span>
+   <span><a class="nav-links" href="{{ site.baseurl }}{{ page.previous.url }}" title="Articles old">
+         <i class="fas fa-long-arrow-alt-left prev"></i>{{ page.previous.title }}</a></span>
   {% else %}
   <!--  -->
   {% endif %}
@@ -13,8 +12,8 @@
   <div class="right-nav">
   {% if page.next.url %}
   <h4>NEXT POST</h4>
-  <span><a class="nav-links" href="{{ site.baseurl }}{{ page.next.url }}" title="Articles old">
-        {{ page.next.title }} <i class="fas fa-long-arrow-alt-right next"></i></a></span>
+  <span><a class="nav-links" href="{{ site.baseurl }}{{ page.next.url }}" title="Articles new">
+        {{ page.next.title }}<i class="fas fa-long-arrow-alt-right next"></i></a></span>
   {% else %}
       <!-- -->
   {% endif %}

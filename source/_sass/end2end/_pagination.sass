@@ -1,100 +1,198 @@
-.wj-pagination
-  text-align: center
-  margin-top: $base-spacing
-
-  a, span
-    padding: 7px 18px
-    border: $base-border
-    margin: 0px -2px
-    background-color: white
-    display: inline-block
-    border-radius: 3px
-    line-height: 1.5em
-    font-size: 0.8em
-    font-weight: bold
-
-    &:hover
-        background-color: $light-gray-color
-        color: $base-font-color
-
-  span.next, span.prev
-      margin: 0px 5px
-
-  a.next
-      margin-left: 2px
-      &:hover
-          background-color: $primary-color
-          color: white
-
-  a.prev
-      margin-right: 2px
-      &:hover
-          background-color: $primary-color
-          color: white
-
-  a.disabled
-      color: $primary-color
-      &:hover
-          background-color: $primary-color
-          color: white
-
-  span.active
-      background-color: $medium-gray-color
-      color: white
-
-.wj-pagination span.button, .wj-pagination a.button
-  padding: 7px 18px
-
-
+/* Paginator */
 
 .pagination
   text-align: center
-  margin-top: $base-spacing
-  margin-bottom: 0
-  margin-right: 0
-  margin-left: 0
+  margin: 2.666668em
+  span
+    background-color: darken($medium-gray-color, 5%)
+    color: white
 
-  @extend %clearfix
+  .disabled-page
+      pointer-events: none
+      cursor: not-allowed
+      background-color: transparent
+      color: $base-font-color
+      opacity: .8
+      //color: lighten($base-font-color, 15%)
+
+  a:hover
+    background-color: darken($primary-color, 15%)
+    color: #fff
+
+.page-item
+  background-color: $secondary-background-color
+  color: $base-font-color
+  padding: 4px 8px
+  font-weight: 400
+  padding: 0.5em 1em
+  -webkit-border-radius: 4px
+  -moz-border-radius: 4px
+  -ms-border-radius: 4px
+  border-radius: 4px
+  border: $base-border
+
+
+//.pagination
+  text-align: center
+  margin-top: 1em
+  margin-left: auto
+  margin-right: auto
+  padding-top: 1em
+  width: 100%
+
+  //@extend %clearfix
+  .next:hover,
+  .prev:hover
+    background: $primary-color
+    color: white
+
+  ul
+    //text-align: center
+    margin: 0
+    padding: 0
+    list-style-type: none
+    font-family: $base-font-family
 
   li
-    padding: 0 .4em
-
-  li, a, span
     display: inline-block
+    //float: left
+    margin-left: -1px
+    margin-right: -1px
 
-    &:active,
-    &:focus
-      background: $light-gray-color
-      color: $base-font-color
-      border: $base-border
+    a,
+    span
+      display: block
+      margin-bottom: 0.25em
+      padding: 0.5em 1em
+      font-family: $base-font-family
+      font-size: 14px
+      font-weight: bold
+      line-height: 1.5
+      text-align: center
+      text-decoration: none
+      color: tint($primary-color, 25%)
+      border: 1px solid shade($base-border-color, 25%)
+      border-radius: 0
 
-  a, span
-    line-height: 1em
-    font-size: 0.8em
+      &:hover
+        color: shade($primary-color, 25%)
 
-  .pages
-    font-size: 16px
-    color: $base-font-color
-    border: $base-border
-    background: transparent
-    padding: 8px 16px
-    margin: 0
+      &.current,
+      &.current.disabled-page
+        color: #fff
+        background: $gray
 
-    a
-        margin-left: 0
-        margin-right: 0
-        padding: 8px 16px
-        background: white
-        color: $base-font-color
-        border: $base-border
-        font-weight: bold
+      &.disabled-page
+        color: tint($primary-color, 50%)
+        pointer-events: none
+        cursor: not-allowed
 
-    a.active, a.focus
-        padding: 8px 16px
-        background-color: $light-gray-color
-        color: $base-font-color
-        border: $base-border
+    &:first-child
+      margin-left: 0
 
-  span
-    color: #9a9a9a
-    //font-style: italic
+      a
+        border-top-left-radius: $small-border-radius
+        border-bottom-left-radius: $small-border-radius
+
+    &:last-child
+      a
+        border-top-right-radius: $small-border-radius
+        border-bottom-right-radius: $small-border-radius
+
+  /* next/previous buttons */
+  &--pager
+    display: block
+    padding: 1em 2em
+    float: left
+    width: 50%
+    font-family: $base-font-family
+    font-size: 1.8rem
+    font-weight: bold
+    text-align: center
+    text-decoration: none
+    color: tint($primary-color, 25%)
+    border: 1px solid shade($base-border-color, 25%)
+    border-radius: $small-border-radius
+
+    &:hover
+      //@include yiq-contrasted($muted-text-color)
+      color: tint($primary-color, 25%)
+
+    &:first-child
+      border-top-right-radius: 0
+      border-bottom-right-radius: 0
+
+    &:last-child
+      margin-left: -1px
+      border-top-left-radius: 0
+      border-bottom-left-radius: 0
+
+    &.disabled-page
+      color: tint($primary-color, 50%)
+      pointer-events: none
+      cursor: not-allowed
+
+.page__content + .pagination,
+.page__meta + .pagination,
+.page__share + .pagination,
+.page__comments + .pagination
+  margin-top: 2em
+  padding-top: 2em
+  border-top: 1px solid $base-border-color
+
+.ui.segment
+  text-align: center
+  margin-left: auto
+  margin-right: auto
+  background: transparent
+  border: none
+
+.ui.grid,
+.ui.container,
+.ui.menu,
+.ui.pagination
+    margin-left: auto
+    margin-right: auto
+    border: none
+    box-shadow: none
+    a.item
+        color: #9b4dca
+
+.ui.grid,
+.ui.container,
+.ui.menu
+    background: $secondary-background-color
+
+.responsive-pagination
+    display: none
+    +media($phone-large)
+        display: inline-block
+
+.ui.grid,
+.ui.segment
+    border: none
+    box-shadow: none
+
+.ui.horizontal.segments,
+.ui.segment
+    border: none
+    border-left: none
+    border-right: none
+    box-shadow: none
+    background: $secondary-background-color
+
+.ui.pagination
+    .icon.item:hover
+        background: $primary-color
+        color: white
+
+    .disabled.item
+        pointer-events: none
+        cursor: not-allowed
+
+    .active.item
+        border: 1px solid $gray
+
+    .item:hover
+        background: $primary-color
+        color: white

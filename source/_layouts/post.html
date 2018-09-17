@@ -2,102 +2,93 @@
 layout: pages
 ---
 
-<script src="https://unpkg.com/vanilla-back-to-top@7.1.2/dist/vanilla-back-to-top.min.js"></script>
-<script>addBackToTop({
-    diameter: 40,
-    innerHTML: '<svg aria-hidden="true" data-prefix="fas" data-icon="arrow-up" class="svg-inline--fa fa-arrow-up fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#fff" d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"></path></svg>',
-    backgroundColor: '#9b4dca',
-    textColor: '#fff'
-})</script>
+<style>
+.fitted {
+  margin: 0px;
+  padding: 0px 10px;
+}
+</style>
+
+{% include up_button.html %}
 
 <!-- posted in category posted-on date by Clarissa -->
 <article role="article" class="post">
   <div class="card">
     <header class="post-header">
       <h1 class="post-title">{{ page.title }}</h1>
-      <div class="post-meta">
-            <span class="post-date"><time>{{ page.date | date: "%A %B %-d, %Y" }}</time>
+      <span class="post-meta">
+            <!-- <span class="post-date"> -->
+            <i class="fas fa-user"></i>&ensp;{{ site.author.name }}
+            &ensp;|&ensp;
+            <i class="far fa-clock"></i>&ensp;<time>{{ page.date | date: "%A %B %-d, %Y" }}</time>
             {% if page.tags != blank %}
             &ensp;|&ensp;
+            <i class="fas fa-tag"></i>
             {% for tag in page.tags %}
-            <a href="{{site.baseurl}}/tags/#{{ tag }}"><span class="post-tags">{{ tag }}</span></a>
+            <a href="{{site.baseurl}}/tags/#{{ tag }}"><span class="post-tags-plain">{{ tag }}</span></a>
             {% endfor %}
-            </span>
+            <!-- </span> -->
         {% endif %}
-    </div>
+    </span>
     </header>
-    <!-- <div class="hrule base-spacing"></div> -->
+
     {{ content | toc }}
+
+<!--
+  <hr class="fitted">
+  <div class="ui horizontal divider">Or</div>
+  <h4 class="ui horizontal divider header">Specifications</h4>
+-->
 
 <!------ post meta details ------>
 {% include post-meta-details.html %}
 <!------ post meta details ------>
 
-<div class="hrule"></div>
-
 <!------ related post list ------>
+{% if site.related_posts.size >= 1 %}
 <div class="related">
- {% if site.related_posts.size >= 1 %}
-<!-- <div class="hrule"></div> -->
-  <ul class="related-posts">
-  <h3 class="footer-section-title">Related Posts</h3>
+  <div class="ui horizontal divider center aligned">Related Posts</div>
     {% for post in site.related_posts limit:3 %}
-      <li>
-          <h6>
-          <a href="{{ site.baseurl }}{{ post.url }}">
-            {{ post.title }}
-            <small>{{ post.date | date_to_string }}</small>
-          </a>
-      </h6>
-      </li>
+    <ul class="related-posts">
+        <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}<small>&ensp;&bull;&ensp;{{ post.date | date_to_string }}</small></a></li>
+    </ul>
     {% endfor %}
-  </ul>
-  {% endif %}
 </div>
+{% endif %}
 <!------ related post list ------>
 
-<!-- .about-author -->
-<div class="about-author">
-  <h3>WRITTEN BY</h3>
-  <!-- .author-bio -->
-  <div class="author-bio">
-      <!-- .author-img -->
-      <div class="author-img">
-          <a href="{{ site.baseurl }}/about"><img alt="Logo" src="{{ site.baseurl }}/images/logo.png" class="avatar"></a>
-      </div>
-      <!-- .author-img -->
-      <!-- .author-info -->
-      <div class="author-info">
-          <h4 class="author-name">{{ site.author.name }}</h4>
-        <!--  <p>{{ site.description | markdownify }}</p> -->
-          <p>
-              Clarissa is a recent Computer Science and Information Security graduate who loves Vulnerability Research, Binary Exploitation,
-              Reverse Engineering, and Exploit Mitigation.  On her free time, she loves playing wargames to learn and practice new hacking skillz.
-         </p>
-    </div>
-      <!-- .author-info -->
-  </div>
-  <!-- .author-bio -->
-</div>
-<!-- .about-author -->
+<!------  author section   ------>
+{% include post-author.html %}
+<!------  author section   ------>
+
 
 <!------ post nav ------>
 {% include post-nav.html %}
 <!------ post nav ------>
 
+<!-- .about-author -->
+<div class="about-author">
+    <h3>WRITTEN BY</h3>
+    <!-- .author-bio -->
+    <div class="author-bio">
+      <div class="author-img">
+          <img class="ui avatar image" src="{{ site.baseurl }}/images/logo.png" alt="{{ site.author.name }}">
+           <!-- <a href="{{ site.baseurl }}/about"><img alt="Logo" src="{{ site.baseurl }}/images/logo.png" class="avatar"></a> -->
+      </div>
+      <!-- .author-info -->
+      <div class="author-info">
+          <h4 class="author-name">Author | {{ site.author.name }}</h4>
+         <p>{{ site.description | markdownify }}</p>
+          <!--<p>
+              Clarissa is a recent Computer Science and Information Security graduate who loves Vulnerability Research, Binary Exploitation,
+              Reverse Engineering, and Exploit Mitigation.  On her free time, she loves playing wargames to learn and practice new hacking skillz.
+         </p>-->
+    </div>
+     <!-- .author-info -->
+  </div>
+  <!-- .author-bio -->
+</div>
+<!-- .about-author -->
+
 </div>  <!-- end card -->
 </article> <!-- end article -->
-  <!------ related post list
-   <div class="related">
-   {% if site.related_posts.size >= 1 %}
-    <h3>Related Posts</h3>
-    <ul class="related-posts">
-    {% for related_post in site.related_posts limit: 5 %}
-      <li><a href="{{ related_post.url }}">{{ related_post.title | strip_newlines }}<span class="date-style">&ensp;&ndash;&ensp;{{ related_post.date  | date_to_string }}</span></a></li>
-    {% endfor %}
-    </ul>
-  </div>
-  {% endif %}
-  {% include related.html %}
-  </div>
-  </article> -->

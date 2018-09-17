@@ -2,6 +2,9 @@
     {% include google_analytics.html %}
 {% endif %}
 
+{% feed_meta %}
+
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,8 +32,19 @@
 <link href="/testgitpages/images/fav.ico" rel="icon" type="image/x-icon"/> -->
 {% include favicon.html %}
 
+<!-- SYNTAX HIGHLIGHTJS STYLE
+<link rel="stylesheet" href="{{ site.baseurl }}/css/github-gist.css"> -->
+
+<!-- FONT AWESOME -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+<!-- SEMANTIC UI -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css" integrity="sha256-iK7AZM7Xa42iuURdMdo1sp38ld/JJ3fDtS0523GKqdk=" crossorigin="anonymous" />
+
+<!-- MERMAID -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mermaid/7.0.0/mermaid.min.css" integrity="sha256-446p5J21C94lwDJ4yc/oaAO0/0M1NVX5tuHb/ntU2NQ=" crossorigin="anonymous" />
+<!-- THEME STYLESHEET -->
 <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-<link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}">
+<link rel="stylesheet" href="{{ "/css/onedark.css" | prepend: site.baseurl }}">
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />

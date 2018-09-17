@@ -5,44 +5,42 @@
 .post
   display: table
 
-  &-date
+  &-description
+      font-weight: 300
+      margin-bottom: 0px
+
+  //&-date
       display: block
       margin-top: -.5rem
       margin-bottom: $xsmall-spacing
-      color: #9a9a9a
+      color: $medium-gray-color
 
   &-meta
+    display: block
+    margin-top: -.5rem
+    margin-bottom: $xsmall-spacing
+    color: $medium-gray-color
     font-size: 90%
-    //font-weight: 300
-    padding: 0.5em 0em
-    margin-top: 0
-    margin-bottom: 0
-    text-transform: uppercase
+    //padding: 0.5em 0em
+    //margin-top: 0
+    //margin-bottom: 0
+    //text-transform: uppercase
 
     +media($tablet-small)
-        font-size: 1em
+        font-size: 100%
+
+    i
+        font-size: 90%
 
     &-list
         font-weight: 300
         text-transform: none
         margin-bottom: 5px
 
-    &-tag
-        background: $light-gray-color
-        color: $base-font-color
-        font-weight: normal
-        padding: 0px 2px
-        margin-right: 5px
-        display: inline-block
-        border-radius: 0px
-        border: 1px solid $light-gray-color
-        font-size: 1.1rem
+    .post-tags
+        font-size: 0.8rem
         +media($tablet-small)
-            font-size: 1.2rem
-
-        &:hover
-            background-color: $primary-color
-            color: white
+            font-size: 0.9rem
 
   &-thumbnail
     &, img
@@ -58,15 +56,15 @@
       border: $base-border
 
   .read-more
-    display: inline-block
-    color: tint($primary-color, 10%)
+    display: block
+    color: shade($primary-color, 10%)
     font-weight: bold
     font-size: 1em
-    //margin-top: .3em
-    text-align: right
+    margin-top: .3em
+    text-align: left
     a
         &:hover
-            font-color: shade($primary-color, 10%)
+            color: shade($primary-color, 10%)
 
     &:before
         content: "\f055"
@@ -87,6 +85,7 @@
   &-title-list
       margin-top: 0
       margin-bottom: $xsmall-spacing
+      line-height: 1.1
 
   &-blog-title
       margin-top: 0
@@ -96,6 +95,7 @@
   &-list
     .post
       @extend .card
+      width: 100%
 
       a
         color: $base-font-color
@@ -104,6 +104,9 @@
         &:active,
         &:focus
           color: $primary-color
+
+      button
+        width: 150px
 
 // BLOG INDEX.HTML
 .post-list
@@ -135,44 +138,40 @@
       +media($tablet-small)
           padding: 0 0 0 $base-spacing
 
-
 // TAGS
-.tags,
-.fa-tags
-    color: $base-font-color
-    display: inline-block
-    //margin-top: 8px
-    //font-size: .8rem
+//.tags
+//    color: $base-font-color
+//    display: inline-block
 
-.tags::before
-    content: ""
-    padding: 0px 0px
+//.tags::before
+//    content: ""
+//    padding: 0px 0px
 
-    +media($tablet-small)
-        content: $icon-price-tag
-        padding: 0px 0px
-        font-family: 'end2end'
-        src: url("#{$icon-font-path}/end2end.ttf?cgaqog") format("truetype"), url("#{$icon-font-path}/end2end.woff?cgaqog") format("woff"), url("#{$icon-font-path}/end2end.svg?cgaqog#end2end") format("svg")
-        font-size: 90%
-        opacity: .85
+//    +media($tablet-small)
+//        content: $icon-price-tag
+//        padding: 0px 0px
+//        font-family: 'end2end'
+//        src: url("#{$icon-font-path}/end2end.ttf?cgaqog") format("truetype"), url("#{$icon-font-path}/end2end.woff?cgaqog") format("woff"), url("#{$icon-font-path}/end2end.svg?cgaqog#end2end") format("svg")
+//        font-size: 90%
+//        opacity: .85
 
-.tag
-    display: inline-block
-    color: $base-font-color
-    background-color: $light-gray-color
-    font-size: 90%
-    font-family: inherit
-    padding: 2px 5px
-    border: 1px solid $light-gray-color
-    border-radius: 3px
-    margin: 5px 3px
+//.tag
+//    display: inline-block
+//    color: $base-font-color
+//    background-color: $light-gray-color
+//    font-size: 90%
+//    font-family: inherit
+//    padding: 2px 5px
+//    border: 1px solid $light-gray-color
+//    border-radius: 3px
+//    margin: 5px 3px
     //text-transform: lowercase
-    letter-spacing: 0px
-    &:hover
-        color: $light-gray-color
-        background-color: $primary-color
-        border: 1px solid $primary-color
-        text-decoration: underline
+//    letter-spacing: 0px
+//    &:hover
+//        color: $light-gray-color
+//        background-color: $primary-color
+//        border: 1px solid $primary-color
+//        text-decoration: underline
 
 .tag-count
     margin-left: 3px
@@ -186,30 +185,31 @@
     text-transform: uppercase
     //font-family: "Lato", Arial, serif
 
-// POST DETAILS AT BOTTOM OF POST
+// POST META DETAILS AT BOTTOM OF POST
 .details
-    padding-top: 1em
+    //margin-top: 1rem
+    padding-top: 1rem
     padding-left: 10px
     padding-right: 10px
     font-weight: 400
     font-size: 0.850em
-    line-height: 1.9
+    //line-height: 1.9
     color: $medium-gray-color
     display: block
+    border-top: 1px solid $light-gray-color
 
     &-list
         list-style: none
         list-style-position: outside
         padding-left: 0px
-        margin: 0
-        padding-bottom: 0.5em
+        margin: 0px
+        //padding-top: 0.5em
 
     h3
         margin: .6em 0 .6em 0
 
     h4
         text-align: center
-
         +media($tablet-small)
             text-align: left
 
@@ -221,6 +221,7 @@
         text-transform: uppercase
         font-weight: 800
         color: #6A7686
+        text-decoration: none
 
         &:hover
             background: $primary-color
@@ -257,10 +258,12 @@
 // NAVIGATION LINKS
 .post-nav
     @extend %clearfix
-    padding: 1em 0 2em
+    margin-top: 3rem
+    padding: 0em 0 2em
     overflow: auto
     margin-left: -10px
     margin-right: -10px
+    border-top: 1px solid $light-gray-color
 
     &::after
         clear: both
@@ -289,7 +292,6 @@
 
     .nav-links
         font-size: 90%
-        font-weight: 300
         line-height: 1.4
         margin-top: 0px
         text-transform: uppercase
@@ -300,7 +302,7 @@
             font-size: 1em
 
         &:hover
-            font-weight: 400
+            font-weight: 900
 
     .prev
         margin-right: .4em
@@ -312,45 +314,46 @@
 // ------------ RELATED SECTION ------------
 //
 .related
-    padding: 0em 10px 0em
-    //border-top: 1px solid #eee
+    margin-top: 2rem
+    padding-top: 2rem
+    padding-left: 10px
+    padding-right: 10px
 
 .related-posts
-    padding-left: 0
-    list-style: none
-    margin: .2em 0 0em
-    line-height: 1.8
-    font-size: 1em
-
-    //.date-style
-        font-size: 90%
-        color: $medium-gray-color
-
-    h3
-        margin: 2.0em 0 .6em 0
+    padding-left: 10px
+    margin: 0em
+    list-style: circle
 
     h6
         margin: 0
 
     li a
-        display: inline-block
-        margin-bottom: .2em
-        line-height: 1.2
-        font-size: 1.2em
-        text-transform: uppercase
-        font-weight: 300
+        line-height: 1
+        //font-size: 1.2em
+        //text-transform: uppercase
+        //font-weight: 300
         //color: #6A7686
 
-    li small
-        font-size: 75%
+    li a small
+        font-size: 90%
         color: #999
+        display: inline-block
 
     li a:hover
         text-decoration: none
-        font-weight: 400
+        //font-weight: 400
 
     li a:hover small
         color: inherit
+
+    .small-date
+        font-size: 80%
+        color: $medium-gray-color
+        opacity: 0.8
+        font-weight: 900
+        word-spacing: 0
+        +media($tablet-small)
+            word-spacing: 0.2rem
 //
 // ------------ RELATED SECTION ------------
 //
@@ -410,24 +413,6 @@
     margin-left: .5em
     margin-right: 0
 
-.col-md-6
-    padding-left: 30px
-    padding-right: 30px
-
-    +media($desktop)
-        padding-left: 20px
-        padding-right: 20px
-
-.pr-none
-    padding-right: 0 !important
-
-.pl-none
-    padding-left: 0 !important
-
-.row
-    margin-left: -20px
-    margin-right: -20px
-
 #markdown-toc::before
     content: "Table of Contents"
     font-size: 2rem
@@ -470,6 +455,9 @@
     list-style-position: inside
     margin-top: 2em
     margin-bottom: 2em
+
+//toc-entry li
+// <li class="toc-entry toc-h1">
 
 li.toc-h1
     list-style-type: decimal
@@ -580,18 +568,156 @@ li.toc-h5
 .author-info *:first-child
     margin-top: 0
 
-.back-to-top
-    float: right
-    color: $primary-color
-    font-weight: 900
-    text-transform: uppercase
-    font-size: .8rem
 
+
+.zoom
     a
-        color: $medium-gray-color
         &:hover
-            color: shade($medium-gray-color, 40%)
+            color: $primary-color
+            opacity: 0.8
 
-    i
-        margin-left: 0.3em
-        vertical-align: middle
+.img-container
+    position: relative
+    margin: 30px auto
+    //display: block
+    //width: 100%
+    max-width: 100%
+    height: auto
+
+.image
+    display: block
+    max-width: 100%
+    height: auto
+
+.overlay
+    +position(absolute, 0 0 0 0)
+    height: 100%
+    max-width: 100%
+    opacity: 0
+    transition: .3s ease
+    background-color: $primary-color
+
+.img-container:hover .overlay
+    opacity: 0.9
+
+.overlay-icon
+    color: white
+    font-size: 100px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    -ms-transform: translate(-50%, -50%)
+    text-align: center
+
+.fa-search-plus:hover
+    color: #eee
+
+.show
+    display: block
+
+
+.social,
+.divider,
+footer .icon,
+.sidebar .logo
+    display: inline
+    color: $medium-gray-color
+    a
+        // removes site-wide underline animation
+        &:before
+            background: transparent
+
+.ui.horizontal.divider
+    color: $medium-gray-color
+    font-family: $base-font-family
+    font-weight: 900
+    //margin-top: 3em
+    //margin-bottom: 1em
+    //padding-top: 2em
+    //padding-bottom: 2em
+    padding-left: 10px
+    padding-right: 10px
+    text-transform: capitalize
+
+.ui.avatar.image
+    margin-right: 0.25em
+    width: 2em
+    height: 2em
+    +media($tablet-small)
+        width: 3em
+        height: 3em
+
+
+.ui.basic.label
+    margin: 0.3em auto
+
+.ui.grid,
+.ui.horizontal.list
+    background: white
+    .item
+        background: white
+        .content
+            background: white
+
+
+.ui.text.menu
+    color: $medium-gray-color
+    a
+        &:hover
+            color: shade($primary-color, 20%)
+
+    .active.item
+        color: tint($medium-gray-color, 20%)
+
+    .header.item
+        color: $base-font-color
+
+
+.articles-footer
+    background: white
+    margin-top: 2rem
+    border-bottom: 1px solid $light-gray-color
+    padding-top: 2rem
+    //padding-bottom: 1em
+    &-name
+        font-family: $heading-font-family
+        font-size: 1.2rem
+        +media($tablet-small)
+            font-size: 1.5rem
+    &-description
+        font-size: 1.0rem
+        font-style: italic
+        letter-spacing: 1px
+        +media($tablet-small)
+            font-size: 1.2rem
+    time
+        color: $medium-gray-color
+        display: block
+        margin: 3em auto
+        text-align: center
+
+    .post-footer
+        background: white
+        @media print
+            display: none
+        margin: 3em 0
+
+    .read-now
+        color: transparent
+        padding-bottom: 1em
+        position: relative
+        left: 0
+        @include transition(all,.1s)
+        a
+            color: transparent
+            &:hover
+                .read-now
+                    left: 70%
+                    +media($tablet)
+                        left: 50%
+
+                    color: $primary-color
+                    a
+                        color: $primary-color
+                        font-style: italic

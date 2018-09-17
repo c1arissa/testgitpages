@@ -1,11 +1,33 @@
 ---
 layout: pages
+title: Clarissa's Blog
 ---
+<style>
+.blog-nav {
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+</style>
+
+<div class="ui vertical stripe segment">
+<div class="ui middle aligned stackable text container">
+    <p>blah blah</p>
+</div>
+</div>
+
+<div class="blog-nav">
+<b>View:</b>
+&ensp;&ensp;
+<i class="fas fa-book" style="margin-right: 8px;"></i><a href="{{ site.baseurl }}/blog/" title="Blog" data-tooltip="View: All Posts">All Posts</a>
+&ensp;&ensp;&ensp;
+<i class="fas fa-tags" style="margin-right: 8px;"></i><a href="{{ site.baseurl }}/tags/" title="Tags" data-tooltip="View: Tag Page">Tags</a>
+&ensp;&ensp;&ensp;
+<i class="fas fa-folder-open" style="margin-right: 8px;"></i><a href="{{ site.baseurl }}/category/" title="Category" data-tooltip="View: Category Page">Category</a>
+</div>
 
 <section class="post-list">
   {% for post in paginator.posts %}
     {% include article.html %}
   {% endfor %}
-
   {% include pagination.html %}
 </section>

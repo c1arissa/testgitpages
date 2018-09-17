@@ -21,3 +21,28 @@
 
     @media #{$media-query}
       @content
+
+@mixin link-underline($color, $height : 2px)
+  color: $color
+  cursor: pointer
+  text-decoration: none
+  padding-bottom: 2px
+  position: relative
+  &:before
+    content: ""
+    position: absolute
+    left: 0
+    bottom: 0
+    right: 100%
+    background: $color
+    height: $height
+    transition: right $base-duration $base-timing
+    //@include transition(right, .2s)
+  &:hover,
+  &:focus,
+  &:active,
+  &.active
+    text-decoration: none
+    color: shade($color, 35%)
+    &:before
+      right: 0

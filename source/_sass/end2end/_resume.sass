@@ -2,6 +2,23 @@
 .resume
     color: $base-font-color
 
+    body
+        padding-top: 0
+
+    .main-container
+        background: darken($base-background-color, 3%)
+        padding: $base-spacing 0
+
+    .container
+        max-width: 100%
+        margin-left: $base-spacing
+        margin-right: $base-spacing
+        padding-left: $base-spacing
+        padding-right: $base-spacing
+        +media($tablet-small)
+            margin-left: $big-spacing
+            margin-right: $big-spacing
+
     ul li
         line-height: 1.4rem
 
@@ -10,15 +27,6 @@
 
     p
         margin-bottom: 2rem
-
-    .button
-        width: 240px
-        text-align: center
-        display: block
-        font-size: 1.1rem
-        margin-bottom: 1rem
-        +media($tablet-small)
-            display: inline-block
 
     .contact-list
         list-style: none
@@ -31,34 +39,28 @@
         +media($tablet)
             font-size: 1.1rem
 
-        //li i
-            margin-right: 1rem
-            font-size: 1.1rem
-            text-align: center
-
 
     .date
         @extend %clearfix
-        display: block
         font-weight: 900
         margin: 0
         font-size: 90%
         opacity: .75
-        //margin: $xxsmall-spacing 0
         color: $medium-gray-color
-        font-style: normal
-        letter-spacing: 0px
+        float: right
+        text-align: right
         +media($tablet-small)
-            float: right
-            text-align: right
-            margin: 0
+            float: none
+            display: block
+            text-align: left
 
         i
-            display: none
+            margin-right: 0.3rem
+            display: inline-block
             +media($tablet-small)
-                margin-right: 0.3rem
-                display: inline-block
-
+                display: none
+                margin-right: 0rem
+                
     //.date::before
         content: ""
         +media($tablet-small)
@@ -79,25 +81,36 @@
         //font-style: italic
         //font-weight: 300
 
+    .skill
+        text-align: left
+        margin-right: 0.5em
+        font-weight: 900
+        font-size: 1.2rem
+
     .skills
         @extend %clearfix
         text-align: left
 
         &-left
-            //font-size: 18px
-            font-weight: 900
-            display: block
+            float: left
+            text-align: left
+            width: 50%
             +media($tablet-small)
-                float: left
-                text-align: left
-                width: 40%
+                width: 30%
+
+            i
+                color: $primary-color
+                font-size: 0.8rem
+                +media($tablet-small)
+                    font-size: 1rem
 
         &-right
-            display: block
+            font-weight: 900
+            float: left
+            text-align: left
+            width: 50%
             +media($tablet-small)
-                float: left
-                text-align: left
-                width: 60%
+                width: 70%
 
     .name
         font-size: 3.5rem
@@ -255,7 +268,7 @@
     /* SECTION-TITLE */
     .section-title
         position: relative
-        margin-top: 2em
+        margin-top: 3em
         margin-bottom: 1em
         font-size: 1.5em
         text-transform: uppercase
@@ -275,3 +288,173 @@
         display: inline-block
         padding-right: 1.4em
         background: #fff
+
+    .flex-container
+        display: flex
+        display: -webkit-flex
+        display: -moz-flex
+        flex-direction: column
+        align-items: flex-start
+        +media($tablet-small)
+            flex-direction: row
+            flex-wrap: wrap
+
+        h2
+            margin-top: 0
+            color: $primary-color
+
+    .row
+        margin-top: 60px
+        +media($tablet-small)
+            margin-top: 0px
+
+    .sidebar
+        @extend .card
+        //align-self: stretch
+        width: 100%
+        margin: 10px
+        +media($tablet-small)
+            position: -webkit-sticky
+            position: sticky
+            top: 0.5rem
+            margin: 0px
+            flex: 30%
+            align-self: flex-start
+            justify-content: flex-start
+
+        .gravatar
+            width: 150px
+            height: auto
+            margin-top: -80px
+            text-align: center
+            border-radius: 100%
+            -webkit-border-radius: 100%
+            -moz-border-radius: 100%
+            border: 4px solid $light-gray-color
+            +media($tablet-small)
+                width: 130px
+                height: auto
+                margin-top: 0px
+                border: none
+
+    .main
+        //@extend .card
+        margin: 10px
+        +media($tablet-small)
+            margin: 0px
+            flex: 50%
+            margin-left: 1rem
+            justify-content: flex-end
+
+        .content
+            @extend .card
+
+    .resume-container
+        @extend %clearfix
+        position: relative
+        margin: 0 auto
+        padding: 0
+        width: 420px
+        +media($tablet-small)
+            width: 768px
+        +media($desktop)
+            width: 960px
+
+        &:after
+            content: "\0020"
+            display: block
+            height: 0
+            clear: both
+            visibility: hidden
+
+    .resume-container .column,
+    .resume-container .columns
+        float: left
+        display: inline
+        margin: 0
+        +media($tablet-small)
+            margin-left: 10px
+            margin-right: 10px
+
+    .resume-container .three.columns
+        width: 420px
+        +media($tablet-small)
+            width: 124px
+        +media($desktop)
+            width: 160px
+
+    .resume-container .thirteen.columns
+        width: 300px
+        +media($tablet-small)
+            width: 604px
+        +media($desktop)
+            width: 760px
+
+    em
+        font-style: normal
+        font-weight: bold
+        color: rgb(100, 100, 100)
+
+    .subheader
+        color: #777
+
+    p
+        margin: 0 0 20px 0
+
+    p img
+        margin: 0
+
+    p.lead
+        font-size: 21px
+        line-height: 27px
+        color: #777
+
+    .profile-card
+        //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+        //max-width: 300px
+        //margin: auto
+        text-align: center
+
+        h2
+            margin: 0
+
+        .button-container
+            display: flex
+            display: -webkit-flex
+            display: -moz-flex
+            flex-direction: column
+            align-items: stretch
+
+        .button,
+        .button a
+            flex-grow: 1
+            width: 250px
+            align-self: center
+            background: $primary-color
+            color: white
+            text-align: center
+            padding: 8px
+            font-size: 1.1rem
+            +media($tablet-small)
+                width: 100%
+
+            &:hover
+                opacity: 0.7
+
+            .fa-file-pdf
+                margin: 0
+                border: 0
+                padding: 0
+
+        .title
+            margin: 0px
+            color: grey
+            font-size: 18px
+
+        a
+            text-decoration: none
+            font-size: 22px
+            color: $primary-color
+
+            &:hover
+                opacity: 0.7

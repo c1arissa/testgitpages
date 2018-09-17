@@ -6,10 +6,10 @@ kramdown:
   input: GFM
   auto_ids: true
   footnote_nr: 1
-  toc_levels: 1, 2, 3, 4, 5
+  toc_levels: 1..5
   syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    css_class: 'highlight'
+  #syntax_highlighter_opts:
+    #css_class: 'highlight'
     #span:
       #line_numbers: false
     #block:
@@ -27,7 +27,10 @@ plugins:
     - jekyll-email-protect
     - jekyll/tagging
     - jekyll-tagging-related_posts
-
+    - jekyll-feed
+    - jekyll-mermaid
+    - jekyll_github_sample
+    - jekyll-github-metadata
 
 paginate: 5
 paginate_path: "/blog/page/:num/"
@@ -37,25 +40,24 @@ excerpt_separator: "<!-- more -->"
 
 toc:
   min_level: 1 # default: 1
-  max_level: 5 # default: 6
+  max_level: 4 # default: 6
 
-category_archive:
-  type: jekyll-archives
-  path: /categories/
-tag_archive:
-  type: jekyll-archives
-  path: /tags/
-jekyll-archives:
-  enabled:
-    - categories
-    - tags
-  layouts:
-    category: archive-taxonomy
-    tag: archive-taxonomy
-  permalinks:
-    category: /categories/:name/
-    tag: /tags/:name/
-
+#category_archive:
+#  type: jekyll-archives
+#  path: /categories/
+#tag_archive:
+#  type: jekyll-archives
+#  path: /tags/
+#jekyll-archives:
+#  enabled:
+#    - categories
+#    - tags
+#  layouts:
+#    category: archive-taxonomy
+#    tag: archive-taxonomy
+# permalinks:
+#    category: /categories/:name/
+#    tag: /tags/:name/
 
 tag_page_layout: tags
 tag_page_dir: tag
@@ -68,10 +70,12 @@ sass:
 
 # SEO settings
 title: Clarissa Podell
-description: "Clarissa Podell's Personal Site and Blog"
+description: "Clarissa Podell's Personal Site and Blog" #Personal site to showcase my academic work, side-projects, and interests for personal and professional use.
+#Where I blog about Jekyll and other awesome things
 keywords: "Jekyll, theme, free, download, SEO, blog, web, computer security"
 url: http://localhost:4000/testgitpages  #http://yourdomain.com
 baseurl: "/testgitpages"
+repository: "c1arissa/testgitpages"
 
 #google_analytics: UA-121634252-1
 repo: http://github.com/c1arissa/testgitpages

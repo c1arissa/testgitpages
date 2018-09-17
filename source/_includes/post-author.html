@@ -1,0 +1,31 @@
+<style>
+.ui.grid {
+  background: white;
+  margin-top: 1.5rem;
+}
+</style>
+
+<div class="articles-footer">
+<div class="ui horizontal divider center aligned">Published {{ page.date | date: "%b %-d, %Y" }} by</div>
+<div class="ui center aligned grid">
+<div class="ui huge horizontal divided list">
+  <div class="item">
+    <img class="ui middle aligned avatar image" src="{{ site.baseurl }}/images/logo.png" alt="{{ site.author.name }}">
+    <div class="content">
+      <div class="header">
+        <a itemprop="name" class="articles-footer-name" href="{{ site.baseurl }}/about" title="About Page">{{ site.author.name }}</a>
+        <div class="social">
+              <i class="icon ellipsis vertical grey-lighter"></i>
+              <a href="{{ site.author.linkedin }}" title="LinkedIn"><i class="icon linkedin"></i></a>
+              <a href="https://github.com/c1arissa" title="github.com/c1arissa"><i class="icon github alternate"></i></a>
+        </div>
+    </div>
+    <div class="articles-footer-description" itemprop="title">
+     <!-- A blog about cybersecurity and hacking by Clarissa. -->
+      Reverse Engineering / Malware Analysis Portfolio.
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+</div>

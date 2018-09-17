@@ -21,8 +21,7 @@ gem "github-pages", group: :jekyll_plugins
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  #gem "bourbon", "~>4.3"
-  gem "bourbon"
+  gem "bourbon", "~>4.3"
   gem "jekyll-feed", "~>0.6"
   gem "jekyll-paginate"
   gem "pygments.rb"
@@ -36,4 +35,7 @@ group :jekyll_plugins do
   gem 'jekyll-email-protect'
   gem 'jekyll-tagging'
   gem 'jekyll-tagging-related_posts'
+  gem 'jekyll-mermaid', '~> 1.0'
+  gem 'jekyll_github_sample'
+  gem "jekyll-github-metadata"
 end

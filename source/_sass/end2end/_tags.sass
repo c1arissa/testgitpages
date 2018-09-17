@@ -1,3 +1,23 @@
+.post-tags-plain
+  display: inline-block
+  background: rgba($primary-color, 0.15)
+  padding: 0 .5rem
+  margin-left: .5rem
+  border-radius: 3px
+  color: $primary-color
+  font-size: 80%
+  font-family: $base-font-family
+
+  &:hover
+    text-decoration: none
+    background: $primary-color
+    color: white
+
+  +media($tablet-small)
+    font-size: 90%
+
+  @include transition(all .1s ease-in-out)
+
 .post-tags,
 .post-cats,
 .set-1,
@@ -6,12 +26,13 @@
 .set-4,
 .set-5
     display: inline-block
-    background-color: tint($base-font-color, 80%)
+    //background-color: tint($base-font-color, 80%)
+    background: rgba($primary-color, 0.15)
     padding: 0 .5rem
     margin-right: .5rem
     border-radius: 3px
-    color: $base-font-color
-    font-size: .8em
+    color: $primary-color
+    font-size: 90%
     font-family: $base-font-family
 
     &:before
@@ -24,6 +45,7 @@
         background: $primary-color
         color: white
 
+
     @include transition(all .1s ease-in-out)
 
 .post-cats
@@ -33,6 +55,16 @@
         padding-right: .5em
 
     @include transition(all .1s ease-in-out)
+
+.count
+    display: inline-block
+    line-height: 1
+    margin-left: .2rem
+    //vertical-align: top
+    //font-weight: 900
+    vertical-align: super
+    font-size: 10px
+    font-size: 0.625rem
 
 .tags-expo
     &:target:before
@@ -51,14 +83,21 @@
             font-size: 1em
 
     .tags-expo-list
-        padding: 0em 0 2em
+        //border: 2px solid $light-gray-color
+        //border-radius: $base-border-radius
+        //background-color: $secondary-background-color
+        //padding: 2em 1em
+        //max-width: 100%
+        //margin: 2em auto
+        //padding: 0em 0 2em
         font-size: 1em
 
         +media($tablet-small)
             font-size: rem(18)
 
-        .post-tag
-            margin: .2em .3em
+        .post-tags,
+        .post-cats
+            margin: .3em .4em
 
     .tags-expo-section
         ul
@@ -72,10 +111,14 @@
                 &:hover
                     list-style-type: disc
                     padding: 0 .5rem
+
+        h2
+            margin-top: 0em
+            margin-bottom: $xxsmall-spacing
     a
         text-decoration: none
 
-    .post-date
+    .post-date-small
         display: inline-block
         font-size: 80%
         color: $medium-gray-color
@@ -183,3 +226,87 @@ aside
 
     .item:hover .url aside
         color: $dark-gray-color
+
+
+.tag-box
+    list-style: none
+    margin: 0
+    padding: 4px 0
+    overflow: hidden
+    *zoom: 1
+
+    &:before,
+    &:after
+        display: table
+        content: ""
+        line-height: 0
+
+    &:after
+        clear: both
+
+    .inline li
+        float: left
+        font-size: 14px
+        font-size: 0.875rem
+        line-height: 2.5
+
+    a
+        padding: 4px 6px
+        margin: 2px
+        background-color: #e6e6e6
+        -webkit-border-radius: 4px
+        -moz-border-radius: 4px
+        border-radius: 4px
+        text-decoration: none
+
+    a span
+        vertical-align: super
+        font-size: 10px
+        font-size: 0.625rem
+
+.codinfox-category-list
+    padding-left: 1rem
+    list-style: none
+
+    h3
+        font-size: 1rem
+        margin-top: 0
+
+    li small
+        font-size: 75%
+        color: #999
+
+    li a:hover
+        color: #6a9fb5
+        text-decoration: none
+
+    li a:hover small
+        color: inherit
+
+.codinfox-category-mark
+    padding: 0 .5rem 0 .5rem
+    border-radius: 5px
+    background: #f0f0f0
+    color: #999
+    text-decoration: none
+    margin-bottom: .75rem
+
+.codinfox-category-mark:hover
+    font-weight: bold
+
+.codinfox-tag-mark
+    font-size: 75%
+    padding: 0 .5rem 0 .5rem
+    border-radius: 5px
+    background: #e7f2f7
+    color: #6a9fb5
+
+.page-title
+    text-transform: uppercase
+
+.post-title-url
+    color: $primary-color
+    font-weight: normal
+    font-size: 1rem
+    +media($tablet-small)
+        font-size: 1.2rem

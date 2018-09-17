@@ -1,34 +1,223 @@
----
-layout: pages
----
+<!DOCTYPE html>
+<html lang="en">
+<!------------------ HEAD ------------------>
+<head>
+  {% include head.html %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}css/cv.css">
+  {% seo %}
+</head>
+<!------------------ BODY ------------------>
+<body>
+{% include header.html %}
+{% include up_button.html %}
 
-<article role="article" class="page card">
-<section class="resume">
+<main class="main-container">
+<div class="container">
+<!------------------ START CONTENT ------------------>
 
-<!------ HEADER ------>
+
+<article class="resume">
+<!-- The flexible grid (content) -->
+<div class="flex-container">
+
+  <!------------------ LEFT ------------------> 
+  <div class="row"></div>
+  <div class="sidebar">
+
+      <div class="profile-card">
+        <img src="{{ site.baseurl }}/images/colored.jpg" alt="avatar" class="gravatar">
+        <h2>Clarissa Podell</h2>
+        <p class="title">CEO & Founder, Example</p>
+        <p>Harvard University</p>
+        <div style="margin: 12px 0;">
+          <a href="#"><i class="fab fa-dribbble"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+       </div>
+
+       <div class="button-container">
+       <a class="button button-ghost" style="margin-bottom: 12px;" href="{{ '/contact' | prepend: site.baseurl }}" title="Contact me">Contact me</a>
+       <a class="button button-ghost" href="{{ '/images/Resume.pdf' | prepend: site.baseurl }}" title="Resume">
+           <i class="fas fa-file-pdf"></i> Download my Résumé</a>
+      </div>
+
+      </div>
+
+</div>
+
+  <!------------------ RIGHT ------------------>
+  <div class="main">
+
+  <div class="content">
+      <h2 class="section-title"><span><i class="fas fa-user"></i>SUMMARY</span></h2>
+
+<p>
+
+<div class="ui divided list">
+  <div class="item">
+      <div class="header">Floated Icon</div>
+      This text will always have a left margin to make sure it sits alongside your icon
+  </div>
+<div class="item">
+    <i class="right triangle icon"></i>
+    <div class="content">
+      <div class="header">Icon Alignment</div>
+      <div class="description">Floated icons are by default top aligned. To have an icon top aligned try this example.</div>
+    </div>
+</div>
+</div>
+
+<div class="ui list">
+  <div class="item">
+    <i class="map marker icon"></i>
+    <div class="content">
+      <a class="header">Krolewskie Jadlo</a>
+      <div class="description">An excellent polish restaurant, quick delivery and hearty, filling meals.</div>
+    </div>
+  </div>
+</div>
+
+</p>
+
+      <p>
+      Cybersecurity graduate with interests in Vulnerability Research, Binary Exploitation, Reverse Engineering, and Exploit Mitigation.
+      Experience collaborating in groups and competence in real-world environments through online CTF/wargame challenges and coursework using DETERLab testbeds.
+      Seeking career opportunity to collaborate with like-minded individuals.
+      <p>
+  </div>
+
+
+  <div class="content">
+      <!------ AWARDS ------>
+      <h2 class="section-title"><span><i class="fas fa-trophy"></i>AWARDS</span></h2>
+
+      <h3 class="title">Ruth S. Lefkowitz Mathematics Prize</h3>
+      <span class="subtitle">John Jay College of Criminal Justice <span class="date"><i class="far fa-calendar-alt"></i>May 2018</span></span>
+      <ul>
+          <li>Award presented to one graduating senior for outstanding academic performance in the Computer Science & Information Security major.</li>
+      </ul>
+
+      <h3 class="title">Cornell University's Women in Technology & Entrepreneurship in New York (WiTNY) Scholarship</h3>
+      <span class="subtitle">John Jay College of Criminal Justice <span class="date"><i class="far fa-calendar-alt"></i>2017&ndash;2018</span></span>
+      <ul>
+          <li>Scholarship for promising female students in technology-related disciplines.</li>
+      </ul>
+  </div>
+
+
+      <!------ EDUCATION ------>
+  <div class="content">
+      <h2 class="section-title"><span><i class="fas fa-graduation-cap"></i>EDUCATION</span></h2>
+
+      <!--
+       <b>Bachelor in Information Technology from University of Oklahoma with GPA of 4.0</b>
+       dark = bachelor, it, univ, 4.0
+       light = everything else
+   -->
+
+      <!------ SCHOOL 1 ------>
+      <h3 class="title">Bachelor of Science in Computer Science and Information Security</h3>
+
+      <span class="subtitle">CUNY John Jay College of Criminal Justice &mdash; New York, NY<span class="date"><i class="far fa-calendar-alt"></i>Jan 2016&ndash;May 2018</span></span>
+      <ul>
+          <li>GPA: 4.0 / 4.0</li>
+      </ul>
+
+      <span class="subsection">Security Courses</span><br>
+      <ul class="courses">
+          <li>Capstone in Cybersecurity and Digital Forensics I & II</li>
+          <li>Faculty Mentored Research in Bitcoin and Blockchain</li>
+          <li>Computer Security and Forensics</li>
+          <li>Network Security and Forensics</li>
+          <li>Cryptography and Cryptanalysis</li>
+      </ul>
+
+      <span class="subsection">Computer Science Courses</span><br>
+      <ul class="courses">
+          <li>Operating Systems,
+              Computer Architecture,
+              Computer Networking,
+              Object-Oriented Programming in C++,
+              Data Structures,
+              Algorithms,
+              Programming Languages,
+              Calculus I & II</li>
+      </ul>
+
+      <!------ SCHOOL 2 ------>
+      <h3 class="title">Bachelor of Science in Fashion Merchandising Management</h3>
+
+      <span class="subtitle">SUNY Fashion Institute of Technology &mdash; New York, NY<span class="date"><i class="far fa-calendar-alt"></i>Aug 2009&ndash;May 2013</span></span>
+      <ul>
+          <li>GPA: 3.48 / 4.0</li>
+      </ul>
+  </div>
+
+<!------ SKILLS ------>
+<div class="content">
+      <h2 class="section-title"><span><i class="fas fa-wrench"></i>SKILLS</span></h2>
+      <h3 class="subsection">Languages and Scripting</h3>
+
+      <div class="skills">
+      <span class="skills-left">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half"></i>
+      </span>
+      <span class="skills-right">Python</span>
+      </div>
+
+      <div class="skills">
+      <span class="skills-left">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+      </span>
+      <span class="skills-right">HTML5, CSS3, SASS</span>
+      </div>
+  </div>
+
+
+<div class="content">
+        <small class="txt-center">
+          &copy;{{ site.time | date: '%Y' }} All rights reserved. Made with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> and {% octicon heart %}. Hosted by {% octicon logo-github %}
+      </small>
+</div>
+
+<!------ END ------>
+
+</div> <!-- main -->
+
+</div> <!------ flex-container ------>
+</article> <!------ resume ------>
+</div>  <!-- container -->
+</main> <!-- main-container -->
+
+
+<!------ HEADER
 <div class="header">
-
-<!------ LEFT HEADING ------>
 <div class="header-left">
 <h1 class="name">Clarissa Podell</h1>
 <h4 class="subheading">Recent Cybersecurity graduate</h4>
 </div>
-
-<!------ RIGHT HEADING ------>
 <div class="header-right">
-
 <ul class="contact-list">
 <li><i class="icon icon-phone"></i> 631-708-2725</li>
 <li><i class="icon icon-mail4"></i> <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
 <li><i class="icon icon-linkedin2"></i> <a href="{{ site.author.linkedin }}">clarissapodell</a></li>
-<li><i class="icon icon-link"></i> <a href="https://clarissapodell.com">clarissapodell.com</a></li>
+<li><i class="icon icon-link"></i> <a href="https://clarissapodell.com">clarissaodell.com</a></li>
 <li><i class="icon icon-location2"></i> Valley Stream, NY 11580</li>
 </ul>
-
 </div>
-
 </div>
-
+------>
 
 <!------ CONTACT
 <h2 class="section-title"><span><i class="fas fa-envelope"></i>Contact</span></h2>
@@ -38,16 +227,10 @@ layout: pages
 <li><i class="fab fa-linkedin fa-fw fa-lg"></i> <a href="{{ site.author.linkedin }}">clarissapodell</a></li>
 <li><i class="fas fa-globe fa-fw fa-lg"></i> <a href="https://clarissapodell.com">clarissapodell.com</a></li>
 <li><i class="fas fa-location-arrow fa-fw fa-lg"></i> Valley Stream, NY 11580</li>
-</ul> ------>
+</ul>
 
 <div class="hrule base-spacing"></div>
 
-<a class="button button-ghost" href="{{ '/images/Resume.pdf' | prepend: site.baseurl }}" title="resume">Download my Résumé</a>
-
-
-<!-- <a class="button button-ghost" href="{{ '/' | prepend: site.baseurl }}contact" title="Contact">Contact Me</a> -->
-
-<!------ SUMMARY------>
 <h2 class="section-title"><span><i class="fas fa-user"></i>SUMMARY</span></h2>
 
 <p>
@@ -56,10 +239,8 @@ Experience collaborating in groups and competence in real-world environments thr
 Seeking career opportunity to collaborate with like-minded individuals.
 <p>
 
-<!------ EDUCATION ------>
 <h2 class="section-title"><span><i class="fas fa-graduation-cap"></i>EDUCATION</span></h2>
 
-<!------ SCHOOL 1 ------>
 <h3 class="title">Bachelor of Science in Computer Science and Information Security</h3>
 
 <span class="subtitle">CUNY John Jay College of Criminal Justice &mdash; New York, NY<span class="date"><i class="far fa-calendar-alt"></i>Jan 2016&ndash;May 2018</span></span>
@@ -69,12 +250,11 @@ Seeking career opportunity to collaborate with like-minded individuals.
 
 <span class="subsection">Security Courses</span><br>
 <ul class="courses">
-    <li>Capstone in Cybersecurity and Digital Forensics I & II,
-    Faculty Mentored Research in Bitcoin and Blockchain,
-    Computer Security and Forensics,
-    Network Security and Forensics,
-    Cryptography and Cryptanalysis
-</li>
+    <li>Capstone in Cybersecurity and Digital Forensics I & II</li>
+    <li>Faculty Mentored Research in Bitcoin and Blockchain</li>
+    <li>Computer Security and Forensics</li>
+    <li>Network Security and Forensics</li>
+    <li>Cryptography and Cryptanalysis</li>
 </ul>
 
 <span class="subsection">Computer Science Courses</span><br>
@@ -89,7 +269,6 @@ Seeking career opportunity to collaborate with like-minded individuals.
         Calculus I & II</li>
 </ul>
 
-<!------ SCHOOL 2 ------>
 <h3 class="title">Bachelor of Science in Fashion Merchandising Management</h3>
 
 <span class="subtitle">SUNY Fashion Institute of Technology &mdash; New York, NY<span class="date"><i class="far fa-calendar-alt"></i>Aug 2009&ndash;May 2013</span></span>
@@ -115,6 +294,97 @@ Seeking career opportunity to collaborate with like-minded individuals.
 <span class="skills-left">Web</span>
 <span class="skills-right">HTML5, CSS3, SASS, Jekyll</span>
 </div>
+
+<h3 class="subsection">Languages and Scripting</h3>
+
+<div class="skills">
+<span class="skills-left">Python</span>
+<span class="skills-right">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half"></i>
+</span>
+</div>
+
+<div class="skills">
+<span class="skills-left">C, C++</span>
+<span class="skills-right">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="far fa-star"></i>
+</span>
+</div>
+
+<div class="skills">
+<span class="skills-left">HTML5, CSS3, SASS</span>
+<span class="skills-right">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="far fa-star"></i>
+</span>
+</div>
+
+<div class="skills">
+<span class="skills-left">LaTeX</span>
+<span class="skills-right">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half"></i>
+    <i class="far fa-star"></i>
+</span>
+</div>
+
+<div class="skills">
+<span class="skills-left">Perl</span>
+<span class="skills-right">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="far fa-star"></i>
+    <i class="far fa-star"></i>
+</span>
+</div>
+
+<div class="skills">
+<span class="skills-left">Assembly (x86 Intel)</span>
+<span class="skills-right">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="far fa-star"></i>
+    <i class="far fa-star"></i>
+</span>
+</div>
+
+<div class="skills">
+<span class="skills-left">Bash</span>
+<span class="skills-right">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half"></i>
+    <i class="far fa-star"></i>
+    <i class="far fa-star"></i>
+</span>
+</div>
+
+<div class="skills">
+<span class="skills-left">Standard ML</span>
+<span class="skills-right">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="far fa-star"></i>
+    <i class="far fa-star"></i>
+    <i class="far fa-star"></i>
+</span>
+</div>
+
 
 <h3 class="subsection">Systems</h3>
 <div class="skills">
@@ -169,11 +439,17 @@ Seeking career opportunity to collaborate with like-minded individuals.
 </ul>
 
 <h3 class="title">Personal Blog and Website</h3>
-<span class="subtitle">Self-employed @ <a href="https://clarissapodell.com">clarissapodell.com</a> <span class="date"><i class="far fa-calendar-alt"></i>Jan 2018&ndash;Present</span></span>
+<span class="subtitle">Me, myself and I &mdash; <a href="https://clarissapodell.com">clarissapodell.com</a> <span class="date"><i class="far fa-calendar-alt"></i>Jan 2018&ndash;Present</span></span>
 <ul>
     <li>Built locally with Jekyll and hosted by GitHub pages.</li>
     <li>Written in HTML and CSS in SASS.</li>
     <li>Responsive design built for a range of devices! (small/large phones, tablets, laptops, desktops, etc.)</li>
+</ul>
+
+<h3 class="title"><a href="https://clarissapodell.com">clarissapodell.com</a></h3>
+<span class="subtitle">Founder & Primary Developer • <span class="date"><i class="far fa-calendar-alt"></i>2012 — Present</span></span>
+<ul>
+    <li>Jazz Notes is an open source node/ember app that helps you keep track of your music compositions and new ideas.</li>
 </ul>
 
 <!------ LAB WORK ------>
@@ -210,20 +486,7 @@ Seeking career opportunity to collaborate with like-minded individuals.
  <dd>Wrote an exploit in C to bypass Ubuntu's address space layout randomization protection on a binary with a buffer overflow vulnerability.</dd>
 </dl>
 
-<!------ AWARDS ------>
-<h2 class="section-title"><span><i class="fas fa-trophy"></i>AWARDS</span></h2>
 
-<h3 class="title">Ruth S. Lefkowitz Mathematics Prize</h3>
-<span class="subtitle">John Jay College of Criminal Justice <span class="date"><i class="far fa-calendar-alt"></i>May 2018</span></span>
-<ul>
-    <li>Award presented to one graduating senior for outstanding academic performance in the Computer Science & Information Security major.</li>
-</ul>
-
-<h3 class="title">Cornell University's Women in Technology & Entrepreneurship in New York (WiTNY) Scholarship</h3>
-<span class="subtitle">John Jay College of Criminal Justice <span class="date"><i class="far fa-calendar-alt"></i>2017&ndash;2018</span></span>
-<ul>
-    <li>Scholarship for promising female students in technology-related disciplines.</li>
-</ul>
 
 <!------ EXPERIENCE ------>
 <h2 class="section-title"><span><i class="fas fa-briefcase"></i>Work Experience</span></h2>
@@ -287,6 +550,7 @@ Seeking career opportunity to collaborate with like-minded individuals.
     <li>Krav Maga Yellow Belt</li>
 </ul>
 
-<!------ END ------>
-</section>
-</article>
+{% include footer.html %}
+{% include scripts.html %}
+</body>
+</html>
